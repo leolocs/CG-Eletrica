@@ -11,7 +11,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
 ---
 <section class="hero reveal">
   <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-    <source src="/assets/videos/Intro%20hero%20banner,%20CG-Eletrica.mp4" type="video/mp4" />
+    <source src="{{ '/assets/videos/Intro%20hero%20banner,%20CG-Eletrica.mp4' | url }}" type="video/mp4" />
   </video>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="container hero-grid">
@@ -20,7 +20,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
       <p class="lead">Projetos e soluções técnicas para reduzir riscos, melhorar o desempenho energético e otimizar custos operacionais</p>
       <div class="hero-actions">
         <a class="button primary" href="https://wa.me/{{ empresa.whatsapp }}?text={{ whatsappMessage | urlencode }}" target="_blank" rel="noreferrer">Solicitar atendimento</a>
-        <a class="button secondary arrow" href="/servicos.html">Ver soluções →</a>
+        <a class="button secondary arrow" href="{{ '/servicos.html' | url }}">Ver soluções →</a>
       </div>
       <div class="hero-meta">
         <span>Especialista em eficiência energética</span>
@@ -68,42 +68,42 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
         <div class="service-image" aria-label="Espaço reservado para imagem de Projetos e Engenharia"></div>
         <h3>Projetos e Engenharia</h3>
         <p>Projetos elétricos, cálculos, dimensionamentos, orçamentos e documentação técnica.</p>
-        <a href="/servicos/projetos-eletricos.html" class="service-link">Ver soluções →</a>
+        <a href="{{ '/servicos/projetos-eletricos.html' | url }}" class="service-link">Ver soluções →</a>
       </article>
 
       <article class="service-card">
         <div class="service-image" aria-label="Espaço reservado para imagem de Subestações e Manutenção"></div>
         <h3>Subestações e Manutenção</h3>
         <p>Manutenção preventiva e corretiva para sistemas críticos e instalações de alta confiabilidade.</p>
-        <a href="/servicos/manutencao-subestacoes.html" class="service-link">Ver soluções →</a>
+        <a href="{{ '/servicos/manutencao-subestacoes.html' | url }}" class="service-link">Ver soluções →</a>
       </article>
 
       <article class="service-card">
         <div class="service-image" aria-label="Espaço reservado para imagem de Eficiência Energética"></div>
         <h3>Eficiência Energética</h3>
         <p>Análise de consumo, demanda e oportunidades de otimização sem promessas vazias.</p>
-        <a href="/servicos/eficiencia-energetica.html" class="service-link">Solicitar análise →</a>
+        <a href="{{ '/servicos/eficiencia-energetica.html' | url }}" class="service-link">Solicitar análise →</a>
       </article>
 
       <article class="service-card">
         <div class="service-image" aria-label="Espaço reservado para imagem de Segurança e Conformidade"></div>
         <h3>Segurança e Conformidade</h3>
         <p>SPDA, NR-10, laudos e adequações orientadas à segurança e à conformidade técnica.</p>
-        <a href="/servicos/spda.html" class="service-link">Ver soluções →</a>
+        <a href="{{ '/servicos/spda.html' | url }}" class="service-link">Ver soluções →</a>
       </article>
 
       <article class="service-card">
         <div class="service-image" aria-label="Espaço reservado para imagem de Áreas Classificadas EX"></div>
         <h3>Áreas Classificadas EX</h3>
         <p>Projetos e adequações para ambientes com atmosferas potencialmente explosivas.</p>
-        <a href="/servicos/areas-classificadas.html" class="service-link">Ver soluções →</a>
+        <a href="{{ '/servicos/areas-classificadas.html' | url }}" class="service-link">Ver soluções →</a>
       </article>
 
       <article class="service-card">
         <div class="service-image" aria-label="Espaço reservado para imagem de Energia e Continuidade"></div>
         <h3>Energia e Continuidade</h3>
         <p>Sistemas fotovoltaicos, geradores e UPS para garantir disponibilidade e eficiência.</p>
-        <a href="/servicos/sistemas-fotovoltaicos.html" class="service-link">Ver soluções →</a>
+        <a href="{{ '/servicos/sistemas-fotovoltaicos.html' | url }}" class="service-link">Ver soluções →</a>
       </article>
     </div>
   </div>
@@ -137,7 +137,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
         <div class="eyebrow">Projetos</div>
         <h2>Projetos realizados</h2>
       </div>
-      <a href="/projetos.html" class="button secondary">Ver projetos →</a>
+      <a href="{{ '/projetos.html' | url }}" class="button secondary">Ver projetos →</a>
     </div>
 
     <div class="project-carousel">

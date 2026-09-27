@@ -17,9 +17,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
-    <link rel="icon" type="image/webp" href="/assets/images/cg_logo_icon.webp" />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}" />
+    <link rel="icon" type="image/webp" href="{{ '/assets/images/cg_logo_icon.webp' | url }}" />
     {%- if jsonLd %}
     <script type="application/ld+json">
       {
@@ -49,6 +49,6 @@
 
     {% include "components/footer.njk" %}
 
-    <script src="/assets/js/main.js"></script>
+    <script src="{{ '/assets/js/main.js' | url }}"></script>
   </body>
 </html>

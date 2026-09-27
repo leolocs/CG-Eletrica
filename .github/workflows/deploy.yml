@@ -30,8 +30,11 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Build (Tailwind + Eleventy)
-        run: npm run build
+      - name: Build CSS (Tailwind)
+        run: npm run build:css
+
+      - name: Build Eleventy (site de projeto sob /CG-Eletrica/)
+        run: npx @11ty/eleventy --pathprefix=/CG-Eletrica/
 
       - name: Preparar artefato do Pages
         uses: actions/upload-pages-artifact@v3

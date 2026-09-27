@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+permalink: /empresa.html
+title: Empresa | CG Elétrica
+description: Conheça a CG Elétrica, empresa especializada em Engenharia Elétrica, energia e soluções técnicas profissionais no Rio de Janeiro.
+whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento."
+---
+<section class="page-hero reveal">
+  <div class="container page-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Quem somos</div>
+      <h1>Engenharia construída sobre experiência técnica.</h1>
+    </div>
+    <div class="lead">
+      A CG Elétrica atua com Engenharia Elétrica, energia, manutenção, projetos, eficiência energética, segurança e soluções técnicas para instalações com diferentes níveis de complexidade.
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="container page-grid">
+    <div class="info-stack">
+      <article class="info-card">
+        <h3>Quem somos</h3>
+        <p>Somos uma empresa especializada em soluções de Engenharia Elétrica e Energia, apoiada em análise técnica, planejamento, execução e responsabilidade profissional.</p>
+      </article>
+      <article class="info-card">
+        <h3>Experiência</h3>
+        <p>A experiência técnica da CG Elétrica é construída sobre mais de duas décadas de atuação no setor elétrico, com histórico relacionado ao INEE desde 2008 e atuação voltada à eficiência energética e engenharia aplicada.</p>
+      </article>
+    </div>
+
+    <div class="info-stack">
+      <article class="info-card">
+        <h3>Responsabilidade técnica</h3>
+        <p>Os serviços são conduzidos com foco em segurança, confiabilidade, precisão e conformidade. O registro CREA {{ empresa.crea }} reforça o compromisso com a responsabilidade técnica profissional.</p>
+      </article>
+      <article class="info-card">
+        <h3>Princípios</h3>
+        <p>Segurança, precisão, confiabilidade, eficiência e responsabilidade técnica orientam cada análise, projeto e solução executada pela empresa.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+{% from "components/cta-final.njk" import ctaFinal with context %}
+{{ ctaFinal("Atendimento", "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento.", "Solicitar atendimento") }}

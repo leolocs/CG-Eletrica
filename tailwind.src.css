@@ -1,0 +1,4 @@
+/* Entrada do Tailwind (fora de assets/ para não ser copiada ao build) — compilado para assets/css/tailwind.css. Não editar o arquivo gerado. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

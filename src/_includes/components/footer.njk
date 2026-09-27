@@ -1,0 +1,47 @@
+{# Este componente reflete o footer final que assets/js/main.js normalmente injeta em runtime #}
+<footer class="site-footer reveal">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <img class="brand-mark" src="/assets/images/cg_logo_icon.webp" alt="{{ empresa.nome }}" />
+        </div>
+        <p>Soluções em engenharia elétrica</p>
+        <span>CREA {{ empresa.crea }}</span>
+      </div>
+
+      <div>
+        <h3>Menu</h3>
+        <div class="footer-links">
+          {%- for item in navegacao %}
+          {%- if item.label != "Início" %}
+          <a href="{{ item.url }}">{{ item.label }}</a>
+          {%- endif %}
+          {%- endfor %}
+        </div>
+      </div>
+
+      <div>
+        <h3>Contato</h3>
+        <div class="footer-links">
+          <div class="footer-social-links" aria-label="Redes sociais e contato">
+            <a href="{{ empresa.instagram }}" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <img src="/assets/images/instagram.svg" alt="" />
+            </a>
+            <a href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <img src="/assets/images/whatsapp.svg" alt="" />
+            </a>
+            <a href="mailto:" aria-label="E-mail">
+              <img src="/assets/images/maildotru.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>©{{ "now" | currentYear }} {{ empresa.nome }}, Todos os direitos reservados</span>
+      <small>Site Desenvolvido por: <a href="https://leolocs.com.br" target="_blank" rel="noreferrer">Leolocs</a></small>
+    </div>
+  </div>
+</footer>

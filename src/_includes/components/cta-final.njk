@@ -1,0 +1,18 @@
+{# Macro reutilizável do CTA final: chamar com {% from "components/cta-final.njk" import ctaFinal with context %} #}
+{% macro ctaFinal(ctaEyebrow, whatsappMessage, ctaButtonText) %}
+<section class="reveal">
+  <div class="container">
+    <div class="cta-box">
+      <div>
+        <div class="eyebrow" style="color: rgba(247,248,250,0.7);">{{ ctaEyebrow }}</div>
+        <h2>Qual solução em energia o seu projeto precisa?</h2><br>
+        <p>A CG Elétrica desenvolve soluções em engenharia elétrica de acordo com a necessidade de cada empresa, instalação ou empreendimento — de projetos e subestações à eficiência energética, sistemas fotovoltaicos e manutenção especializada.</p>
+      </div>
+      <br>
+      <div>
+        <a class="button primary" href="https://wa.me/{{ empresa.whatsapp }}?text={{ whatsappMessage | urlencode }}" target="_blank" rel="noreferrer">{{ ctaButtonText }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}

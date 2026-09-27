@@ -1,0 +1,21 @@
+{# Recebe `whatsappMessage` (texto simples) do front-matter de cada página #}
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/index.html" class="brand" aria-label="{{ empresa.nome }} home">
+      <img class="brand-mark" src="/assets/images/cg_logo_icon.webp" alt="{{ empresa.nome }}" />
+      <span>{{ empresa.nome }}</span>
+    </a>
+
+    <nav class="header-nav" aria-label="Navegação principal">
+      {%- for item in navegacao %}
+      <a href="{{ item.url }}"{% if item.url == page.url or (item.url == "/index.html" and page.url == "/") %} class="active"{% endif %}>{{ item.label }}</a>
+      {%- endfor %}
+    </nav>
+
+    <a class="header-cta" href="https://wa.me/{{ empresa.whatsapp }}?text={{ (whatsappMessage or "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento.") | urlencode }}" target="_blank" rel="noreferrer">Solicitar atendimento</a>
+
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+    </button>
+  </div>
+</header>

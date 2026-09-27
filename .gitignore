@@ -7,6 +7,8 @@ Alterações.md
 node_modules/
 dist/
 build/
+_site/
+assets/css/tailwind.css
 .next/
 out/
 .cache/

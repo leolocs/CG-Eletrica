@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+    {%- if themeColor %}
+    <meta name="theme-color" content="{{ themeColor }}" />
+    {%- endif %}
+    {%- if ogTitle %}
+    <meta property="og:title" content="{{ ogTitle }}" />
+    <meta property="og:description" content="{{ ogDescription }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ empresa.dominio }}" />
+    {%- endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/tailwind.css" />
+    <link rel="icon" type="image/webp" href="/assets/images/cg_logo_icon.webp" />
+    {%- if jsonLd %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "{{ empresa.nome }}",
+        "description": "Engenharia Elétrica e Energia para empresas e empreendimentos no Rio de Janeiro.",
+        "areaServed": "Rio de Janeiro, Brasil",
+        "url": "{{ empresa.dominio }}",
+        "telephone": "{{ empresa.whatsappDisplay }}",
+        "sameAs": ["{{ empresa.instagram }}"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Rio de Janeiro",
+          "addressCountry": "BR"
+        }
+      }
+    </script>
+    {%- endif %}
+  </head>
+  <body>
+    {% include "components/header.njk" %}
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    {% include "components/footer.njk" %}
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

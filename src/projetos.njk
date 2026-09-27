@@ -1,0 +1,53 @@
+---
+layout: layouts/base.njk
+permalink: /projetos.html
+title: Projetos Realizados | CG Elétrica
+description: Projetos, diagnósticos e soluções técnicas realizadas pela CG Elétrica em infraestrutura, energia, manutenção e engenharia elétrica no Rio de Janeiro.
+whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de conversar sobre um projeto elétrico."
+---
+<section class="page-hero reveal">
+  <div class="container">
+    <div class="hero-copy">
+      <div class="eyebrow">Projetos</div>
+      <h1>Projetos realizados</h1>
+      <p class="lead">Estrutura preparada para receber casos reais e demonstrar capacidade técnica em diferentes tipos de solução.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="container project-grid">
+    <article class="project-card">
+      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Sistema elétrico industrial" />
+      <div class="project-body">
+        <span class="tag">Subestações</span>
+        <div class="meta"><span>Rio de Janeiro</span><span>2024</span></div>
+        <h3>Upgrade de subestação</h3>
+        <p>Reestruturação de infraestrutura crítica com foco em confiabilidade, manutenção e segurança operacional.</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e4?auto=format&fit=crop&w=900&q=80" alt="Projeto elétrico em prédio" />
+      <div class="project-body">
+        <span class="tag">Projetos Elétricos</span>
+        <div class="meta"><span>Campos dos Goytacazes</span><span>2023</span></div>
+        <h3>Projeto para empreendimento comercial</h3>
+        <p>Dimensionamento e documentação para operação segura com atendimento às necessidades do cliente.</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Sistema fotovoltaico" />
+      <div class="project-body">
+        <span class="tag">Fotovoltaico</span>
+        <div class="meta"><span>Angra dos Reis</span><span>2024</span></div>
+        <h3>Viabilidade e integração solar</h3>
+        <p>Diagnóstico técnico de geração e compatibilidade com a infraestrutura existente.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+{% from "components/cta-final.njk" import ctaFinal with context %}
+{{ ctaFinal("Fale sobre seu projeto", "Olá, encontrei a CG Elétrica pelo site e gostaria de conversar sobre um projeto elétrico.", "Conversar sobre meu projeto") }}

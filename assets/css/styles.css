@@ -419,7 +419,10 @@ p { margin: 0; }
 }
 
 .service-image {
+  display: block;
+  width: 100%;
   min-height: 190px;
+  object-fit: cover;
   background: linear-gradient(135deg, rgba(6,18,36,0.12), rgba(251,176,22,0.2));
   border-bottom: 1px solid rgba(6,18,36,0.1);
 }
@@ -433,6 +436,7 @@ p { margin: 0; }
 
 .service-card h3 {
   margin-top: 22px;
+  margin-bottom: 10px;
 }
 
 .service-card p {

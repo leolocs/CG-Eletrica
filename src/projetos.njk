@@ -17,35 +17,17 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de convers
 
 <section class="reveal">
   <div class="container project-grid">
+    {%- for projeto in projetos %}
     <article class="project-card">
-      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Sistema elétrico industrial" />
+      <img src="{{ projeto.image | url }}" alt="{{ projeto.imageAlt }}" />
       <div class="project-body">
-        <span class="tag">Subestações</span>
-        <div class="meta"><span>Rio de Janeiro</span><span>2024</span></div>
-        <h3>Upgrade de subestação</h3>
-        <p>Reestruturação de infraestrutura crítica com foco em confiabilidade, manutenção e segurança operacional.</p>
+        <span class="tag">{{ projeto.tag }}</span>
+        <div class="meta"><span>{{ projeto.location }}</span><span>{{ projeto.year }}</span></div>
+        <h3>{{ projeto.title }}</h3>
+        <p>{{ projeto.description }}</p>
       </div>
     </article>
-
-    <article class="project-card">
-      <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e4?auto=format&fit=crop&w=900&q=80" alt="Projeto elétrico em prédio" />
-      <div class="project-body">
-        <span class="tag">Projetos Elétricos</span>
-        <div class="meta"><span>Campos dos Goytacazes</span><span>2023</span></div>
-        <h3>Projeto para empreendimento comercial</h3>
-        <p>Dimensionamento e documentação para operação segura com atendimento às necessidades do cliente.</p>
-      </div>
-    </article>
-
-    <article class="project-card">
-      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Sistema fotovoltaico" />
-      <div class="project-body">
-        <span class="tag">Fotovoltaico</span>
-        <div class="meta"><span>Angra dos Reis</span><span>2024</span></div>
-        <h3>Viabilidade e integração solar</h3>
-        <p>Diagnóstico técnico de geração e compatibilidade com a infraestrutura existente.</p>
-      </div>
-    </article>
+    {%- endfor %}
   </div>
 </section>
 

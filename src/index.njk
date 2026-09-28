@@ -61,49 +61,29 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
         <div class="eyebrow">Soluções</div>
         <h2>Soluções em Engenharia Elétrica</h2>
       </div>
+      <a href="{{ '/servicos.html' | url }}" class="button secondary">Conhecer mais soluções →</a>
     </div>
 
     <div class="service-grid">
       <article class="service-card">
-        <div class="service-image" aria-label="Espaço reservado para imagem de Projetos e Engenharia"></div>
-        <h3>Projetos e Engenharia</h3>
-        <p>Projetos elétricos, cálculos, dimensionamentos, orçamentos e documentação técnica.</p>
-        <a href="{{ '/servicos/projetos-eletricos.html' | url }}" class="service-link">Ver soluções →</a>
+        <img class="service-image" src="{{ '/assets/images/substacao.webp' | url }}" alt="Manutenção de Subestações Elétricas" />
+        <h3>Manutenção de Subestações Elétricas</h3>
+        <p>Manutenção preventiva, corretiva, inspeção, diagnóstico e garantia de confiabilidade operacional.</p>
+        <a href="{{ '/servicos/manutencao-subestacoes.html' | url }}" class="service-link">Ver serviço →</a>
       </article>
 
       <article class="service-card">
-        <div class="service-image" aria-label="Espaço reservado para imagem de Subestações e Manutenção"></div>
-        <h3>Subestações e Manutenção</h3>
-        <p>Manutenção preventiva e corretiva para sistemas críticos e instalações de alta confiabilidade.</p>
-        <a href="{{ '/servicos/manutencao-subestacoes.html' | url }}" class="service-link">Ver soluções →</a>
+        <img class="service-image" src="{{ '/assets/images/projeto-planta-eletrica.webp' | url }}" alt="Projetos, Cálculos e Orçamentos Elétricos" />
+        <h3>Projetos, Cálculos e Orçamentos Elétricos</h3>
+        <p>Projetos, dimensionamento, especificações, materiais e documentação técnica.</p>
+        <a href="{{ '/servicos/projetos-eletricos.html' | url }}" class="service-link">Ver serviço →</a>
       </article>
 
       <article class="service-card">
-        <div class="service-image" aria-label="Espaço reservado para imagem de Eficiência Energética"></div>
+        <img class="service-image" src="{{ '/assets/images/painel-infografico-consumo-eletrico.webp' | url }}" alt="Eficiência Energética" />
         <h3>Eficiência Energética</h3>
-        <p>Análise de consumo, demanda e oportunidades de otimização sem promessas vazias.</p>
-        <a href="{{ '/servicos/eficiencia-energetica.html' | url }}" class="service-link">Solicitar análise →</a>
-      </article>
-
-      <article class="service-card">
-        <div class="service-image" aria-label="Espaço reservado para imagem de Segurança e Conformidade"></div>
-        <h3>Segurança e Conformidade</h3>
-        <p>SPDA, NR-10, laudos e adequações orientadas à segurança e à conformidade técnica.</p>
-        <a href="{{ '/servicos/spda.html' | url }}" class="service-link">Ver soluções →</a>
-      </article>
-
-      <article class="service-card">
-        <div class="service-image" aria-label="Espaço reservado para imagem de Áreas Classificadas EX"></div>
-        <h3>Áreas Classificadas EX</h3>
-        <p>Projetos e adequações para ambientes com atmosferas potencialmente explosivas.</p>
-        <a href="{{ '/servicos/areas-classificadas.html' | url }}" class="service-link">Ver soluções →</a>
-      </article>
-
-      <article class="service-card">
-        <div class="service-image" aria-label="Espaço reservado para imagem de Energia e Continuidade"></div>
-        <h3>Energia e Continuidade</h3>
-        <p>Sistemas fotovoltaicos, geradores e UPS para garantir disponibilidade e eficiência.</p>
-        <a href="{{ '/servicos/sistemas-fotovoltaicos.html' | url }}" class="service-link">Ver soluções →</a>
+        <p>Diagnóstico de consumo, demanda, faturas e oportunidades de otimização técnica.</p>
+        <a href="{{ '/servicos/eficiencia-energetica.html' | url }}" class="service-link">Ver serviço →</a>
       </article>
     </div>
   </div>
@@ -142,35 +122,17 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
 
     <div class="project-carousel">
       <div class="project-track">
+        {%- for projeto in projetos %}
         <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt="Subestação industrial" />
+          <img src="{{ projeto.image | url }}" alt="{{ projeto.imageAlt }}" />
           <div class="project-body">
-            <span class="tag">Subestação</span>
-            <div class="meta"><span>Rio de Janeiro</span><span>2024</span></div>
-            <h3>Upgrade de sistema de distribuição</h3>
-            <p>Diagnóstico técnico e adequações em infraestrutura crítica de alta confiabilidade.</p>
+            <span class="tag">{{ projeto.tag }}</span>
+            <div class="meta"><span>{{ projeto.location }}</span><span>{{ projeto.year }}</span></div>
+            <h3>{{ projeto.title }}</h3>
+            <p>{{ projeto.description }}</p>
           </div>
         </article>
-
-        <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e4?auto=format&fit=crop&w=900&q=80" alt="Projeto elétrico em obra" />
-          <div class="project-body">
-            <span class="tag">Projetos Elétricos</span>
-            <div class="meta"><span>Campos dos Goytacazes</span><span>2023</span></div>
-            <h3>Dimensionamento para empreendimento comercial</h3>
-            <p>Estruturação de projeto elétrico com foco em operação segura, eficiência e manutenção.</p>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Sistema fotovoltaico" />
-          <div class="project-body">
-            <span class="tag">Fotovoltaico</span>
-            <div class="meta"><span>Angra dos Reis</span><span>2024</span></div>
-            <h3>Viabilidade e integração solar</h3>
-            <p>Estudo técnico para geração, eficiência e compatibilidade com a instalação existente.</p>
-          </div>
-        </article>
+        {%- endfor %}
       </div>
     </div>
   </div>

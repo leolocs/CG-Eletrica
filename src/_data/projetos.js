@@ -1,6 +1,6 @@
 module.exports = [
   {
-    image: "/assets/images/substacao.webp",
+    image: "/assets/images/subestacao.webp",
     imageAlt: "Sistema elétrico industrial",
     tag: "Subestações",
     location: "Rio de Janeiro",

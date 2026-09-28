@@ -7,8 +7,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
 ---
 <section class="page-hero reveal">
   <div class="container page-grid">
-    <div class="hero-copy">
-      <div class="eyebrow">Quem somos</div>
+    <div class="hero-copy max-w-4xl">
       <h1>Engenharia construída sobre experiência técnica.</h1>
       <p class="lead">A CG Elétrica atua com Engenharia Elétrica, energia, manutenção, projetos, eficiência energética, segurança e soluções técnicas para instalações com diferentes níveis de complexidade.</p>
     </div>
@@ -16,30 +15,111 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
 </section>
 
 <section class="reveal">
-  <div class="container page-grid">
-    <div class="info-stack">
-      <article class="info-card">
-        <h3>Quem somos</h3>
-        <p>Somos uma empresa especializada em soluções de Engenharia Elétrica e Energia, apoiada em análise técnica, planejamento, execução e responsabilidade profissional.</p>
-      </article>
-      <article class="info-card">
-        <h3>Experiência</h3>
-        <p>A experiência técnica da CG Elétrica é construída sobre mais de duas décadas de atuação no setor elétrico, com histórico relacionado ao INEE desde 2008 e atuação voltada à eficiência energética e engenharia aplicada.</p>
-      </article>
+  <div class="container grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+    <div class="max-w-xl">
+      <h2>Engenharia aplicada a desafios reais de energia.</h2>
+      <div class="mt-6 grid gap-5 text-muted">
+        <p>Somos uma empresa especializada em soluções de Engenharia Elétrica e Energia, com atuação baseada em análise técnica, planejamento, execução e responsabilidade profissional.</p>
+        <p>A CG Elétrica desenvolve soluções para instalações e sistemas com diferentes níveis de complexidade, sempre priorizando segurança, confiabilidade, eficiência e adequação técnica.</p>
+      </div>
     </div>
 
-    <div class="info-stack">
-      <article class="info-card">
-        <h3>Responsabilidade técnica</h3>
-        <p>Os serviços são conduzidos com foco em segurança, confiabilidade, precisão e conformidade. O registro CREA {{ empresa.crea }} reforça o compromisso com a responsabilidade técnica profissional.</p>
+    <figure class="relative m-0 overflow-hidden rounded-[18px] bg-surface-soft">
+      <img class="h-[320px] w-full object-cover md:h-[440px]" src="{{ '/assets/images/eletric-inspection.webp' | url }}" alt="Profissional realizando inspeção técnica em painel elétrico" />
+      <figcaption class="absolute bottom-0 left-0 bg-ink px-5 py-3 text-sm font-semibold text-white">Análise técnica, planejamento e execução</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="reveal" aria-labelledby="experiencia-titulo">
+  <div class="container border-y border-line py-10 md:py-14">
+    <div class="mb-9 md:mb-12">
+      <h2 id="experiencia-titulo">Experiência em números</h2>
+    </div>
+
+    <div class="grid grid-cols-2 gap-y-10 md:grid-cols-4 md:gap-y-0">
+      <div class="pr-5 md:px-7 md:first:pl-0">
+        <strong class="block text-3xl leading-none tracking-[-0.04em] md:text-4xl">+20 anos</strong>
+        <span class="mt-3 block text-sm leading-relaxed text-muted md:text-base">de experiência em eficiência energética</span>
+      </div>
+      <div class="border-l border-line pl-5 md:px-7">
+        <strong class="block text-3xl leading-none tracking-[-0.04em] md:text-4xl">Desde 2008</strong>
+        <span class="mt-3 block text-sm leading-relaxed text-muted md:text-base">histórico ligado ao INEE</span>
+      </div>
+      <div class="pr-5 md:border-l md:border-line md:px-7">
+        <strong class="block text-3xl leading-none tracking-[-0.04em] md:text-4xl">CREA</strong>
+        <span class="mt-3 block text-sm leading-relaxed text-muted md:text-base">{{ empresa.crea }}</span>
+      </div>
+      <div class="border-l border-line pl-5 md:px-7 md:last:pr-0">
+        <strong class="block text-3xl leading-none tracking-[-0.04em] md:text-4xl">+32</strong>
+        <span class="mt-3 block text-sm leading-relaxed text-muted md:text-base">projetos de subestações realizados</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" aria-labelledby="responsabilidade-titulo">
+  <div class="container grid items-start gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(320px,2fr)] lg:gap-16">
+    <div class="max-w-2xl py-2">
+      <h2 id="responsabilidade-titulo">Engenharia com responsabilidade técnica.</h2>
+      <div class="mt-6 grid gap-5 text-muted">
+        <p>Os serviços da CG Elétrica são conduzidos com foco em segurança, confiabilidade, precisão e conformidade técnica.</p>
+        <p>A atuação profissional é respaldada por registro no CREA e pela emissão de ART quando aplicável ao serviço.</p>
+      </div>
+    </div>
+
+    <aside class="rounded-[18px] bg-ink px-6 py-2 text-white md:px-8" aria-label="Credenciais técnicas">
+      <div class="border-b border-white/15 py-6">
+        <span class="block text-xs font-bold uppercase tracking-[0.12em] text-accent">CREA</span>
+        <strong class="mt-2 block text-xl">{{ empresa.crea }}</strong>
+      </div>
+      <div class="border-b border-white/15 py-6">
+        <span class="block text-xs font-bold uppercase tracking-[0.12em] text-accent">ART</span>
+        <strong class="mt-2 block text-base leading-relaxed">Emissão quando aplicável</strong>
+      </div>
+      <div class="py-6">
+        <span class="block text-xs font-bold uppercase tracking-[0.12em] text-accent">Conformidade técnica</span>
+        <strong class="mt-2 block text-base leading-relaxed">Projetos e serviços orientados por normas e boas práticas</strong>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="reveal" aria-labelledby="principios-titulo">
+  <div class="container">
+    <div class="mb-9 max-w-2xl md:mb-12">
+      <h2 id="principios-titulo">Princípios que orientam cada projeto</h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-x-7 gap-y-8 sm:grid-cols-2 lg:grid-cols-5">
+      <article class="border-t border-ink/20 pt-5">
+        <span class="text-sm font-bold tracking-[0.12em] text-muted">01</span>
+        <h3 class="mt-5 text-xl">Segurança</h3>
+        <p class="mt-3 text-sm leading-relaxed text-muted">Proteção de pessoas, sistemas e instalações.</p>
       </article>
-      <article class="info-card">
-        <h3>Princípios</h3>
-        <p>Segurança, precisão, confiabilidade, eficiência e responsabilidade técnica orientam cada análise, projeto e solução executada pela empresa.</p>
+      <article class="border-t border-ink/20 pt-5">
+        <span class="text-sm font-bold tracking-[0.12em] text-muted">02</span>
+        <h3 class="mt-5 text-xl">Precisão</h3>
+        <p class="mt-3 text-sm leading-relaxed text-muted">Decisões fundamentadas em análise técnica.</p>
+      </article>
+      <article class="border-t border-ink/20 pt-5">
+        <span class="text-sm font-bold tracking-[0.12em] text-muted">03</span>
+        <h3 class="mt-5 text-xl">Confiabilidade</h3>
+        <p class="mt-3 text-sm leading-relaxed text-muted">Soluções pensadas para operação segura e contínua.</p>
+      </article>
+      <article class="border-t border-ink/20 pt-5">
+        <span class="text-sm font-bold tracking-[0.12em] text-muted">04</span>
+        <h3 class="mt-5 text-xl">Eficiência</h3>
+        <p class="mt-3 text-sm leading-relaxed text-muted">Uso racional de energia e recursos.</p>
+      </article>
+      <article class="border-t border-ink/20 pt-5 sm:col-span-2 lg:col-span-1">
+        <span class="text-sm font-bold tracking-[0.12em] text-muted">05</span>
+        <h3 class="mt-5 text-xl">Responsabilidade</h3>
+        <p class="mt-3 text-sm leading-relaxed text-muted">Compromisso técnico em todas as etapas.</p>
       </article>
     </div>
   </div>
 </section>
 
 {% from "components/cta-final.njk" import ctaFinal with context %}
-{{ ctaFinal("Atendimento", "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento.", "Solicitar atendimento") }}
+{{ ctaFinal(null, "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento.", "Solicitar atendimento") }}

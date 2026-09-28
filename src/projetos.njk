@@ -15,7 +15,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de convers
   </div>
 </section>
 <section class="reveal">
-  <div class="container project-grid">
+  <div class="container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
     {%- for projeto in projetos %}
     <article class="project-card">
       <img src="{{ projeto.image | url }}" alt="{{ projeto.imageAlt }}" />

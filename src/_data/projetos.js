@@ -29,4 +29,24 @@ module.exports = [
     description:
       "Diagnóstico técnico de geração e compatibilidade com a infraestrutura existente.",
   },
+  {
+    image: "/assets/images/Painel-eletrico-NR10.webp",
+    imageAlt: "Painel elétrico industrial organizado e identificado",
+    tag: "Estudo demonstrativo",
+    location: "Rio de Janeiro",
+    year: "2025",
+    title: "Modernização de quadro elétrico",
+    description:
+      "Proposta conceitual de adequação de painel, reorganização de circuitos e melhoria das condições de segurança operacional.",
+  },
+  {
+    image: "/assets/images/gerador.webp",
+    imageAlt: "Gerador elétrico para instalação de emergência",
+    tag: "Estudo demonstrativo",
+    location: "Rio de Janeiro",
+    year: "2025",
+    title: "Integração de geração de emergência",
+    description:
+      "Estudo fictício de integração de gerador para suporte a cargas prioritárias e continuidade de operação.",
+  },
 ];

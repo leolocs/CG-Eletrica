@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <div class="brand"><img class="brand-mark" src="${iconPath}" alt="CG Elétrica" /></div>
+            <div class="brand"><img class="brand-mark" src="${iconPath}" alt="CG Elétrica" loading="lazy" decoding="async" /></div>
             <p>Soluções em engenharia elétrica</p>
             <span>CREA 123.775-RJ</span>
           </div>
@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <div>
             <h3>Contato</h3>
             <div class="footer-social-links" aria-label="Redes sociais e contato">
-              <a href="https://www.instagram.com/cadmoengenhariaeletrica/" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="${basePath}assets/images/instagram.svg" alt="" /></a>
-              <a href="https://wa.me/5522998440035" target="_blank" rel="noreferrer" aria-label="WhatsApp"><img src="${basePath}assets/images/whatsapp.svg" alt="" /></a>
-              <a href="mailto:" aria-label="E-mail"><img src="${basePath}assets/images/maildotru.svg" alt="" /></a>
+              <a href="https://www.instagram.com/cadmoengenhariaeletrica/" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="${basePath}assets/images/instagram.svg" alt="" loading="lazy" decoding="async" /></a>
+              <a href="https://wa.me/5522998440035" target="_blank" rel="noreferrer" aria-label="WhatsApp"><img src="${basePath}assets/images/whatsapp.svg" alt="" loading="lazy" decoding="async" /></a>
+              <a href="mailto:" aria-label="E-mail"><img src="${basePath}assets/images/maildotru.svg" alt="" loading="lazy" decoding="async" /></a>
             </div>
           </div>
         </div>

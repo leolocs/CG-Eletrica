@@ -9,7 +9,7 @@ ogDescription: Engenharia elétrica aplicada a soluções seguras, eficientes e 
 jsonLd: true
 whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento."
 ---
-<section class="hero reveal">
+<section class="hero">
   <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
     <source src="{{ '/assets/videos/Intro%20hero%20banner,%20CG-Eletrica.mp4' | url }}" type="video/mp4" />
   </video>
@@ -66,21 +66,21 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
 
     <div class="service-grid">
       <article class="service-card">
-        <img class="service-image" src="{{ '/assets/images/subestacao.webp' | url }}" alt="Manutenção de Subestações Elétricas" />
+        <img class="service-image" src="{{ '/assets/images/subestacao.webp' | url }}" alt="Manutenção de Subestações Elétricas" loading="lazy" decoding="async" />
         <h3>Manutenção de Subestações Elétricas</h3>
         <p>Manutenção preventiva, corretiva, inspeção, diagnóstico e garantia de confiabilidade operacional.</p>
         <a href="{{ '/servicos/manutencao-subestacoes.html' | url }}" class="service-link">Ver serviço →</a>
       </article>
 
       <article class="service-card">
-        <img class="service-image" src="{{ '/assets/images/projeto-planta-eletrica.webp' | url }}" alt="Projetos, Cálculos e Orçamentos Elétricos" />
+        <img class="service-image" src="{{ '/assets/images/projeto-planta-eletrica.webp' | url }}" alt="Projetos, Cálculos e Orçamentos Elétricos" loading="lazy" decoding="async" />
         <h3>Projetos, Cálculos e Orçamentos Elétricos</h3>
         <p>Projetos, dimensionamento, especificações, materiais e documentação técnica.</p>
         <a href="{{ '/servicos/projetos-eletricos.html' | url }}" class="service-link">Ver serviço →</a>
       </article>
 
       <article class="service-card">
-        <img class="service-image" src="{{ '/assets/images/painel-infografico-consumo-eletrico.webp' | url }}" alt="Eficiência Energética" />
+        <img class="service-image" src="{{ '/assets/images/painel-infografico-consumo-eletrico.webp' | url }}" alt="Eficiência Energética" loading="lazy" decoding="async" />
         <h3>Eficiência Energética</h3>
         <p>Diagnóstico de consumo, demanda, faturas e oportunidades de otimização técnica.</p>
         <a href="{{ '/servicos/eficiencia-energetica.html' | url }}" class="service-link">Ver serviço →</a>
@@ -105,7 +105,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
     </div>
 
     <div class="energy-visual">
-      <img src="{{ '/assets/images/painel-infografico-consumo-eletrico.webp' | url }}" alt="Gráfico técnico e painel de energia" />
+      <img src="{{ '/assets/images/painel-infografico-consumo-eletrico.webp' | url }}" alt="Gráfico técnico e painel de energia" loading="lazy" decoding="async" />
     </div>
   </div>
 </section>
@@ -124,7 +124,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
       <div class="project-track">
         {%- for projeto in projetos %}
         <article class="project-card">
-          <img src="{{ projeto.image | url }}" alt="{{ projeto.imageAlt }}" />
+          <img src="{{ projeto.image | url }}" alt="{{ projeto.imageAlt }}" loading="lazy" decoding="async" />
           <div class="project-body">
             <span class="tag">{{ projeto.tag }}</span>
             <div class="meta"><span>{{ projeto.location }}</span><span>{{ projeto.year }}</span></div>

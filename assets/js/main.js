@@ -3,77 +3,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.menu-toggle');
   const currentYear = document.querySelector('[data-current-year]');
   const revealItems = document.querySelectorAll('.reveal');
-  const basePath = window.location.pathname.includes('/servicos/') ? '../' : '';
-  const iconPath = `${basePath}assets/images/cg_logo_icon.webp`;
-
-  document.querySelectorAll('.brand-mark').forEach((mark) => {
-    if (mark.tagName === 'IMG') {
-      mark.src = iconPath;
-      mark.alt = 'CG Elétrica';
-      return;
-    }
-
-    const image = document.createElement('img');
-    image.className = 'brand-mark';
-    image.src = iconPath;
-    image.alt = 'CG Elétrica';
-    mark.replaceWith(image);
-  });
-
-  document.querySelectorAll('.brand > span').forEach((label) => label.remove());
-  document.querySelectorAll('a[href*="servicos.html"]').forEach((link) => {
-    if (link.closest('.header-nav, .footer-links')) {
-      link.textContent = 'Soluções';
-    }
-  });
-
-  const favicon = document.createElement('link');
-  favicon.rel = 'icon';
-  favicon.type = 'image/webp';
-  favicon.href = iconPath;
-  document.head.appendChild(favicon);
-
-  const footer = document.querySelector('.site-footer');
-  if (footer) {
-    footer.innerHTML = `
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <div class="brand"><img class="brand-mark" src="${iconPath}" alt="CG Elétrica" loading="lazy" decoding="async" /></div>
-            <p>Soluções em engenharia elétrica</p>
-            <span>CREA 123.775-RJ</span>
-          </div>
-          <div>
-            <h3>Menu</h3>
-            <div class="footer-links">
-              <a href="${basePath}index.html">Início</a>
-              <a href="${basePath}empresa.html">Empresa</a>
-              <a href="${basePath}servicos.html">Soluções</a>
-              <a href="${basePath}projetos.html">Projetos</a>
-              <a href="${basePath}contato.html">Contato</a>
-            </div>
-          </div>
-          <div>
-            <h3>Contato</h3>
-            <div class="footer-social-links" aria-label="Redes sociais e contato">
-              <a href="https://www.instagram.com/cadmoengenhariaeletrica/" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="${basePath}assets/images/instagram.svg" alt="" loading="lazy" decoding="async" /></a>
-              <a href="https://wa.me/5522998440035" target="_blank" rel="noreferrer" aria-label="WhatsApp"><img src="${basePath}assets/images/whatsapp.svg" alt="" loading="lazy" decoding="async" /></a>
-              <a href="mailto:" aria-label="E-mail"><img src="${basePath}assets/images/maildotru.svg" alt="" loading="lazy" decoding="async" /></a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span>©2026 CG Elétrica, Todos os direitos reservados</span>
-          <small>Site Desenvolvido por: <a href="https://leolocs.com.br" target="_blank" rel="noreferrer">Leolocs</a></small>
-        </div>
-      </div>`;
-  }
 
   if (toggle && header) {
     toggle.addEventListener('click', () => {
       header.classList.toggle('open');
+      const isOpen = header.classList.contains('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
     });
   }
+
+  const prefetchedPages = new Set(
+    Array.from(document.querySelectorAll('link[rel="prefetch"]'), (link) => link.href),
+  );
+  const prefetchPage = (anchor) => {
+    const url = new URL(anchor.href, window.location.href);
+    if (url.origin !== window.location.origin || url.pathname === window.location.pathname) return;
+    if (!url.pathname.endsWith('/') && !url.pathname.endsWith('.html')) return;
+    if (prefetchedPages.has(url.href)) return;
+
+    const prefetch = document.createElement('link');
+    prefetch.rel = 'prefetch';
+    prefetch.href = url.href;
+    document.head.appendChild(prefetch);
+    prefetchedPages.add(url.href);
+  };
+
+  document.addEventListener('pointerover', (event) => {
+    const anchor = event.target.closest('a[href]');
+    if (anchor) prefetchPage(anchor);
+  }, { passive: true });
+
+  document.addEventListener('touchstart', (event) => {
+    const anchor = event.target.closest('a[href]');
+    if (anchor) prefetchPage(anchor);
+  }, { passive: true });
 
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();

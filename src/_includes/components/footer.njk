@@ -1,4 +1,3 @@
-{# Este componente reflete o footer final que assets/js/main.js normalmente injeta em runtime #}
 <footer class="site-footer reveal">
   <div class="container">
     <div class="footer-grid">
@@ -14,9 +13,7 @@
         <h3>Menu</h3>
         <div class="footer-links">
           {%- for item in navegacao %}
-          {%- if item.label != "Início" %}
           <a href="{{ item.url | url }}">{{ item.label }}</a>
-          {%- endif %}
           {%- endfor %}
         </div>
       </div>

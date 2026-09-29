@@ -14,12 +14,24 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ empresa.dominio }}" />
     {%- endif %}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" href="{{ '/assets/fonts/manrope-latin-variable.woff2' | url }}" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}" />
     <link rel="icon" type="image/webp" href="{{ '/assets/images/cg_logo_icon.webp' | url }}" />
+    {%- for item in navegacao %}
+    <link rel="prefetch" href="{{ item.url | url }}" />
+    {%- endfor %}
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": { "href_matches": "/*" },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+    <script defer src="{{ '/assets/js/main.js' | url }}"></script>
     {%- if jsonLd %}
     <script type="application/ld+json">
       {
@@ -49,6 +61,5 @@
 
     {% include "components/footer.njk" %}
 
-    <script src="{{ '/assets/js/main.js' | url }}"></script>
   </body>
 </html>

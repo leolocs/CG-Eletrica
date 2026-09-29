@@ -18,19 +18,6 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}" />
     <link rel="icon" type="image/webp" href="{{ '/assets/images/cg_logo_icon.webp' | url }}" />
-    {%- for item in navegacao %}
-    <link rel="prefetch" href="{{ item.url | url }}" />
-    {%- endfor %}
-    <script type="speculationrules">
-      {
-        "prerender": [
-          {
-            "where": { "href_matches": "/*" },
-            "eagerness": "moderate"
-          }
-        ]
-      }
-    </script>
     <script defer src="{{ '/assets/js/main.js' | url }}"></script>
     {%- if jsonLd %}
     <script type="application/ld+json">

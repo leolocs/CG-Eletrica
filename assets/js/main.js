@@ -13,32 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const prefetchedPages = new Set(
-    Array.from(document.querySelectorAll('link[rel="prefetch"]'), (link) => link.href),
-  );
-  const prefetchPage = (anchor) => {
-    const url = new URL(anchor.href, window.location.href);
-    if (url.origin !== window.location.origin || url.pathname === window.location.pathname) return;
-    if (!url.pathname.endsWith('/') && !url.pathname.endsWith('.html')) return;
-    if (prefetchedPages.has(url.href)) return;
-
-    const prefetch = document.createElement('link');
-    prefetch.rel = 'prefetch';
-    prefetch.href = url.href;
-    document.head.appendChild(prefetch);
-    prefetchedPages.add(url.href);
-  };
-
-  document.addEventListener('pointerover', (event) => {
-    const anchor = event.target.closest('a[href]');
-    if (anchor) prefetchPage(anchor);
-  }, { passive: true });
-
-  document.addEventListener('touchstart', (event) => {
-    const anchor = event.target.closest('a[href]');
-    if (anchor) prefetchPage(anchor);
-  }, { passive: true });
-
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
   }

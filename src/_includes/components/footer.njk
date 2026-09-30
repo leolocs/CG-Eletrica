@@ -23,13 +23,13 @@
         <div class="footer-links">
           <div class="footer-social-links" aria-label="Redes sociais e contato">
             <a href="{{ empresa.instagram }}" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <img src="{{ '/assets/images/instagram.svg' | url }}" alt="" loading="lazy" decoding="async" />
+              <img src="{{ '/assets/images/instagram.svg' | url }}" alt="" decoding="async" />
             </a>
             <a href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-              <img src="{{ '/assets/images/whatsapp.svg' | url }}" alt="" loading="lazy" decoding="async" />
+              <img src="{{ '/assets/images/whatsapp.svg' | url }}" alt="" decoding="async" />
             </a>
-            <a href="mailto:" aria-label="E-mail">
-              <img src="{{ '/assets/images/maildotru.svg' | url }}" alt="" loading="lazy" decoding="async" />
+            <a href="mailto:{{ empresa.email }}" aria-label="E-mail">
+              <img src="{{ '/assets/images/maildotru.svg' | url }}" alt="" decoding="async" />
             </a>
           </div>
         </div>

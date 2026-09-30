@@ -6,33 +6,96 @@ description: Entre em contato com a CG Elétrica por WhatsApp, Instagram ou soli
 whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento."
 ---
 <section class="page-hero">
-  <div class="container">
+  <div class="container text-center">
     <div class="hero-copy">
-      <div class="eyebrow">Contato</div>
-      <h1>Fale com a CG Elétrica</h1>
-      <p class="lead">Atendimento técnico para empresas, empreendimentos e instalações elétricas em todo o Estado do Rio de Janeiro.</p>
+      <h1>Veja nossos canais de atendimento</h1>
+      <p class="lead">Fale com a CG Elétrica para solicitar informações, atendimento técnico ou uma avaliação para sua empresa, instalação ou empreendimento.</p>
     </div>
   </div>
 </section>
+<section class="contact-section" aria-labelledby="contact-title">
+  <div class="container contact-layout">
+    <div class="contact-content">
+      <div class="contact-list" aria-label="Informações de contato">
+        <div class="contact-item">
+          <span class="contact-icon" aria-hidden="true">
+            {% lucide "map-pin" %}
+          </span>
+          <div>
+            <h2>Endereço</h2>
+            <!-- Endereço fictício para layout. Substituir pelo endereço oficial antes da publicação. -->
+            <address>Avenida Rui Barbosa, 1200<br />Centro, Macaé - RJ<br />CEP 27910-362</address>
+          </div>
+        </div>
 
-<section class="reveal">
-  <div class="container contact-grid">
-    <article class="contact-card">
-      <h3>WhatsApp</h3>
-      <p>Converse diretamente com a equipe para solicitar informações ou uma avaliação técnica.</p>
-      <a class="phone" href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noreferrer">{{ empresa.whatsappDisplay }}</a>
-    </article>
-    <article class="contact-card">
-      <h3>Atendimento</h3>
-      <p>Estado do Rio de Janeiro</p>
-    </article>
-    <article class="contact-card">
-      <h3>Instagram</h3>
-      <p>{{ empresa.instagramHandle }}</p>
-      <a class="phone" href="{{ empresa.instagram }}" target="_blank" rel="noreferrer">Abrir perfil</a>
-    </article>
+        <div class="contact-item">
+          <a class="contact-icon" href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noreferrer" aria-label="Abrir conversa no WhatsApp">
+            <img src="{{ '/assets/images/whatsapp.svg' | url }}" alt="" decoding="async" />
+          </a>
+          <div>
+            <h2>WhatsApp</h2>
+            <a href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noreferrer">{{ empresa.whatsappDisplay }}</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <a class="contact-icon" href="{{ empresa.instagram }}" target="_blank" rel="noreferrer" aria-label="Abrir Instagram da CG Elétrica">
+            <img src="{{ '/assets/images/instagram.svg' | url }}" alt="" decoding="async" />
+          </a>
+          <div>
+            <h2>Instagram</h2>
+            <a href="{{ empresa.instagram }}" target="_blank" rel="noreferrer">{{ empresa.instagramHandle }}</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <a class="contact-icon" href="mailto:{{ empresa.email }}" aria-label="Enviar e-mail para a CG Elétrica">
+            <img src="{{ '/assets/images/maildotru.svg' | url }}" alt="" decoding="async" />
+          </a>
+          <div>
+            <h2>E-mail</h2>
+            <a href="mailto:{{ empresa.email }}">{{ empresa.email }}</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-icon" aria-hidden="true">
+            {% lucide "clock" %}
+          </span>
+          <div>
+            <h2>Horário de atendimento</h2>
+            <p>Segunda a sexta, das 8h às 18h</p>
+            <small>Sábados mediante agendamento</small>
+          </div>
+        </div>
+      </div>
+
+      <a class="button primary contact-primary" href="https://wa.me/{{ empresa.whatsapp }}?text={{ 'Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento.' | urlencode }}" target="_blank" rel="noreferrer">
+        Falar pelo WhatsApp
+      </a>
+    </div>
+
+    <div class="contact-map-card">
+      <iframe
+        src="https://www.google.com/maps?q=Maca%C3%A9%2C%20Rio%20de%20Janeiro&amp;output=embed"
+        title="Mapa com a localização geral de Macaé, Rio de Janeiro"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+        border="0"
+      ></iframe>
+      <div class="contact-map-footer">
+        <span class="contact-map-pin" aria-hidden="true" align-items="center">
+          {% lucide "map-pin" %}
+        </span>
+        <div class="contact-map-adress">
+          <strong>Avenida Rui Barbosa, 1200</strong><br>
+          <span>Centro,Macae-RJ</span>
+        </div>
+        <a class="contact-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Maca%C3%A9%2C%20RJ" target="_blank" rel="noreferrer" aria-label="Abrir localização no Google Maps">
+          {% lucide "external-link" %}
+        </a>
+      </div>
+    </div>
   </div>
 </section>
-
-{% from "components/cta-final.njk" import ctaFinal with context %}
-{{ ctaFinal("Iniciar conversa", "Olá, gostaria de verificar o atendimento da CG Elétrica para minha região e solicitar uma avaliação.", "Iniciar conversa") }}

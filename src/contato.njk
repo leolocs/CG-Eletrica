@@ -8,7 +8,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
 <section class="page-hero">
   <div class="container text-center">
     <div class="hero-copy">
-      <h1>Veja nossos canais de atendimento</h1>
+      <h1 id="contact-title">Veja nossos canais de atendimento</h1>
       <p class="lead">Fale com a CG Elétrica para solicitar informações, atendimento técnico ou uma avaliação para sua empresa, instalação ou empreendimento.</p>
     </div>
   </div>
@@ -50,7 +50,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
 
         <div class="contact-item">
           <a class="contact-icon" href="mailto:{{ empresa.email }}" aria-label="Enviar e-mail para a CG Elétrica">
-            <img src="{{ '/assets/images/maildotru.svg' | url }}" alt="" decoding="async" />
+            <img src="{{ '/assets/images/email.svg' | url }}" alt="" decoding="async" />
           </a>
           <div>
             <h2>E-mail</h2>
@@ -85,7 +85,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
         border="0"
       ></iframe>
       <div class="contact-map-footer">
-        <span class="contact-map-pin" aria-hidden="true" align-items="center">
+        <span class="contact-map-pin" aria-hidden="true">
           {% lucide "map-pin" %}
         </span>
         <div class="contact-map-adress">

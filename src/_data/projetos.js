@@ -30,7 +30,7 @@ module.exports = [
       "Diagnóstico técnico de geração e compatibilidade com a infraestrutura existente.",
   },
   {
-    image: "/assets/images/Painel-eletrico-NR10.webp",
+    image: "/assets/images/painel-eletrico-nr10.webp",
     imageAlt: "Painel elétrico industrial organizado e identificado",
     tag: "Estudo demonstrativo",
     location: "Rio de Janeiro",

@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.menu-toggle');
-  const currentYear = document.querySelector('[data-current-year]');
   const revealItems = document.querySelectorAll('.reveal');
 
   if (toggle && header) {
@@ -11,10 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
       toggle.setAttribute('aria-expanded', String(isOpen));
       toggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
     });
-  }
-
-  if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
   }
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

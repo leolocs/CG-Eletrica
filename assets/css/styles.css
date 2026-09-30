@@ -862,11 +862,6 @@ p { margin: 0; }
   max-width: 540px;
 }
 
-.contact-content > .lead {
-  margin-top: 24px;
-  max-width: 52ch;
-}
-
 .contact-list {
   display: grid;
 }
@@ -1138,9 +1133,6 @@ a.contact-icon:focus-visible {
     max-width: none;
   }
 
-  .contact-content h1 {
-    max-width: 15ch;
-  }
 }
 
 @media (max-width: 820px) {
@@ -1207,10 +1199,6 @@ a.contact-icon:focus-visible {
 }
 
 @media (max-width: 600px) {
-  .contact-content h1 {
-    max-width: none;
-  }
-
   .contact-item {
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 14px;

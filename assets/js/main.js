@@ -4,15 +4,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealItems = document.querySelectorAll('.reveal');
 
   if (toggle && header) {
+    const closeMenu = () => {
+      header.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Abrir menu');
+    };
+
     toggle.addEventListener('click', () => {
       header.classList.toggle('open');
       const isOpen = header.classList.contains('open');
       toggle.setAttribute('aria-expanded', String(isOpen));
       toggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
     });
+
+    header.querySelector('.header-nav')?.addEventListener('click', (event) => {
+      if (event.target.closest('a')) closeMenu();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && header.classList.contains('open')) {
+        closeMenu();
+        toggle.focus();
+      }
+    });
   }
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const heroVideo = document.querySelector('.hero-video');
+
+  if (prefersReducedMotion && heroVideo) {
+    heroVideo.pause();
+  }
 
   document.querySelectorAll('.counter').forEach((counter) => {
     const target = Number(counter.dataset.target);
@@ -53,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (!prefersReducedMotion && revealItems.length) {
+  if (!prefersReducedMotion && revealItems.length && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

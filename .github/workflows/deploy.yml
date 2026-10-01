@@ -33,6 +33,9 @@ jobs:
       - name: Build Eleventy (site de projeto sob /CG-Eletrica/)
         run: npm run build -- --pathprefix=/CG-Eletrica/
 
+      - name: Auditar artefato gerado
+        run: npm run audit -- --pathprefix=/CG-Eletrica/
+
       - name: Preparar artefato do Pages
         uses: actions/upload-pages-artifact@v3
         with:

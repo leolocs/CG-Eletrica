@@ -18,7 +18,7 @@ eleventyComputed:
       <p class="lead">{{ servico.heroLead }}</p>
     </div>
     <div class="detail-card">
-      <h3>Benefício objetivo</h3>
+      <h2>Benefício objetivo</h2>
       <p>{{ servico.benefitText }}</p>
     </div>
   </div>
@@ -27,11 +27,11 @@ eleventyComputed:
 <section class="reveal">
   <div class="container service-detail">
     <article class="detail-card">
-      <h3>Quando esse serviço é necessário?</h3>
+      <h2>Quando esse serviço é necessário?</h2>
       <p>{{ servico.quandoText }}</p>
     </article>
     <article class="detail-card">
-      <h3>O que a CG Elétrica executa?</h3>
+      <h2>O que a CG Elétrica executa?</h2>
       <ul>
         {%- for item in servico.executaList %}
         <li>{{ item }}</li>
@@ -39,11 +39,11 @@ eleventyComputed:
       </ul>
     </article>
     <article class="detail-card">
-      <h3>Aplicações</h3>
+      <h2>Aplicações</h2>
       <p>{{ servico.aplicacoesText }}</p>
     </article>
     <article class="detail-card">
-      <h3>Processo</h3>
+      <h2>Processo</h2>
       <ol>
         {%- for item in servico.processoList %}
         <li>{{ item }}</li>
@@ -51,7 +51,7 @@ eleventyComputed:
       </ol>
     </article>
     <article class="detail-card">
-      <h3>Benefícios técnicos</h3>
+      <h2>Benefícios técnicos</h2>
       <ul>
         {%- for item in servico.beneficiosList %}
         <li>{{ item }}</li>
@@ -59,11 +59,11 @@ eleventyComputed:
       </ul>
     </article>
     <article class="detail-card">
-      <h3>Responsabilidade técnica</h3>
+      <h2>Responsabilidade técnica</h2>
       <p>{{ servico.responsabilidadeText }}</p>
     </article>
     <article class="detail-card">
-      <h3>FAQ curta</h3>
+      <h2>Perguntas frequentes</h2>
       <div class="faq">
         {%- for item in servico.faq %}
         <div class="faq-item"><strong>{{ item.pergunta }}</strong>{{ item.resposta }}</div>

@@ -2,19 +2,19 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="{{ '/index.html' | url }}" class="brand" aria-label="{{ empresa.nome }} home">
-      <img class="brand-mark" src="{{ '/assets/images/cg_logo_icon.webp' | url }}" alt="{{ empresa.nome }}" decoding="async" fetchpriority="high" />
+      <img class="brand-mark" src="{{ '/assets/images/cg_logo_icon.webp' | url }}" width="160" height="160" alt="{{ empresa.nome }}" decoding="async" fetchpriority="high" />
     </a>
 
-    <nav class="header-nav" aria-label="Navegação principal">
+    <nav class="header-nav" id="primary-navigation" aria-label="Navegação principal">
       {%- for item in navegacao %}
       <a href="{{ item.url | url }}"{% if item.url == page.url or (item.url == "/index.html" and page.url == "/") %} class="active"{% endif %}>{{ item.label }}</a>
       {%- endfor %}
     </nav>
 
-    <a class="header-cta" href="https://wa.me/{{ empresa.whatsapp }}?text={{ (whatsappMessage or "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento.") | urlencode }}" target="_blank" rel="noreferrer">Solicitar atendimento</a>
+    <a class="header-cta" href="https://wa.me/{{ empresa.whatsapp }}?text={{ (whatsappMessage or "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento.") | urlencode }}" target="_blank" rel="noopener noreferrer">Solicitar atendimento</a>
 
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-      <span></span>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+      <span aria-hidden="true"></span>
     </button>
   </div>
 </header>

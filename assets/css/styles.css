@@ -1165,9 +1165,16 @@ a.contact-icon:focus-visible {
 }
 
 @media (max-width: 600px) {
-  .hero-copy {
+  .hero .hero-copy {
     margin-inline: 0;
-    padding-inline: 0;
+    padding-inline: 20px;
+  }
+
+  .site-footer .footer-grid,
+  .site-footer .footer-bottom {
+    align-items: center;
+    align-content: center;
+    padding-inline: 12px;
   }
 
   .hero-actions {

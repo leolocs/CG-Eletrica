@@ -1199,6 +1199,11 @@ a.contact-icon:focus-visible {
 }
 
 @media (max-width: 600px) {
+  .hero .hero-copy {
+    margin-inline: 0;
+    padding-inline: 12px;
+  }
+
   .contact-item {
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 14px;

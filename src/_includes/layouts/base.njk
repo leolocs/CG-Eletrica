@@ -3,21 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {%- if page.url == "/index.html" %}
+      {%- set canonicalUrl = empresa.dominio + "/" %}
+    {%- else %}
+      {%- set canonicalUrl = empresa.dominio + page.url %}
+    {%- endif %}
+    {%- set socialTitle = ogTitle or title %}
+    {%- set socialDescription = ogDescription or description %}
+    {%- set socialImage = ogImage or (empresa.dominio + "/assets/images/og-cg-eletrica.webp") %}
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}" />
+    {%- if noindex %}
+    <meta name="robots" content="noindex,follow" />
+    {%- endif %}
+    <link rel="canonical" href="{{ canonicalUrl }}" />
     {%- if themeColor %}
     <meta name="theme-color" content="{{ themeColor }}" />
     {%- endif %}
-    {%- if ogTitle %}
-    <meta property="og:title" content="{{ ogTitle }}" />
-    <meta property="og:description" content="{{ ogDescription }}" />
+    <meta property="og:title" content="{{ socialTitle }}" />
+    <meta property="og:description" content="{{ socialDescription }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ empresa.dominio }}" />
-    {%- endif %}
+    <meta property="og:url" content="{{ canonicalUrl }}" />
+    <meta property="og:image" content="{{ socialImage }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CG Elétrica — soluções em engenharia elétrica" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="{{ empresa.nome }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ socialTitle }}" />
+    <meta name="twitter:description" content="{{ socialDescription }}" />
+    <meta name="twitter:image" content="{{ socialImage }}" />
     <link rel="preload" href="{{ '/assets/fonts/manrope-latin-variable.woff2' | url }}" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}" />
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | url }}" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | url }}" />
     <link rel="icon" type="image/webp" href="{{ '/assets/images/cg_logo_icon.webp' | url }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | url }}" />
+    <script>document.documentElement.classList.add("js");</script>
     <script defer src="{{ '/assets/js/main.js' | url }}"></script>
     {%- if jsonLd %}
     <script type="application/ld+json">
@@ -39,7 +63,7 @@
     </script>
     {%- endif %}
   </head>
-  <body>
+  <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
     {% include "components/header.njk" %}
 
     <main>

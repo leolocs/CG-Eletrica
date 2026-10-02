@@ -1,9 +1,9 @@
-<footer class="site-footer reveal">
+<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand">
-          <img class="brand-mark" src="{{ '/assets/images/cg_logo_icon.webp' | url }}" alt="{{ empresa.nome }}" loading="lazy" decoding="async" />
+          <img class="brand-mark" src="{{ '/assets/images/cg_logo_icon.webp' | url }}" width="160" height="160" alt="{{ empresa.nome }}" loading="lazy" decoding="async" />
         </div>
         <p>Soluções em engenharia elétrica</p>
         <span>CREA {{ empresa.crea }}</span>
@@ -22,14 +22,14 @@
         <h3>Contato</h3>
         <div class="footer-links">
           <div class="footer-social-links" aria-label="Redes sociais e contato">
-            <a href="{{ empresa.instagram }}" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <img src="{{ '/assets/images/instagram.svg' | url }}" alt="" decoding="async" />
+            <a href="{{ empresa.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="{{ '/assets/images/instagram.svg' | url }}" width="24" height="24" alt="" decoding="async" />
             </a>
-            <a href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-              <img src="{{ '/assets/images/whatsapp.svg' | url }}" alt="" decoding="async" />
+            <a href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <img src="{{ '/assets/images/whatsapp.svg' | url }}" width="24" height="24" alt="" decoding="async" />
             </a>
             <a href="mailto:{{ empresa.email }}" aria-label="E-mail">
-              <img src="{{ '/assets/images/email.svg' | url }}" alt="" decoding="async" />
+              <img src="{{ '/assets/images/email.svg' | url }}" width="24" height="24" alt="" decoding="async" />
             </a>
           </div>
         </div>
@@ -38,7 +38,7 @@
 
     <div class="footer-bottom">
       <span>©{{ "now" | currentYear }} {{ empresa.nome }}, Todos os direitos reservados</span>
-      <small>Site Desenvolvido por: <a href="https://leolocs.com.br" target="_blank" rel="noreferrer">Leolocs</a></small>
+      <small>Site Desenvolvido por: <a href="https://leolocs.com.br" target="_blank" rel="noopener noreferrer">Leolocs</a></small>
     </div>
   </div>
 </footer>

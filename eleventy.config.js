@@ -41,6 +41,7 @@ function renderIconNode([tag, attributes]) {
 module.exports = function (eleventyConfig) {
   // Reaproveita os assets existentes em assets/ sem duplicá-los em src/
   eleventyConfig.addPassthroughCopy({ assets: "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/.htaccess": ".htaccess" });
 
   eleventyConfig.addFilter("currentYear", () => new Date().getFullYear());
 

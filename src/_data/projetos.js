@@ -1,6 +1,8 @@
 module.exports = [
   {
     image: "/assets/images/subestacao.webp",
+    imageWidth: 1200,
+    imageHeight: 828,
     imageAlt: "Sistema elétrico industrial",
     tag: "Subestações",
     location: "Rio de Janeiro",
@@ -11,6 +13,8 @@ module.exports = [
   },
   {
     image: "/assets/images/refinaria.webp",
+    imageWidth: 1200,
+    imageHeight: 800,
     imageAlt: "Projetos em áreas classificadas Ex",
     tag: "Projetos Elétricos",
     location: "Campos dos Goytacazes",
@@ -21,6 +25,8 @@ module.exports = [
   },
   {
     image: "/assets/images/painel-fotovoltaico.webp",
+    imageWidth: 1200,
+    imageHeight: 800,
     imageAlt: "Sistema fotovoltaico",
     tag: "Fotovoltaico",
     location: "Angra dos Reis",
@@ -28,25 +34,5 @@ module.exports = [
     title: "Viabilidade e integração solar",
     description:
       "Diagnóstico técnico de geração e compatibilidade com a infraestrutura existente.",
-  },
-  {
-    image: "/assets/images/painel-eletrico-nr10.webp",
-    imageAlt: "Painel elétrico industrial organizado e identificado",
-    tag: "Estudo demonstrativo",
-    location: "Rio de Janeiro",
-    year: "2025",
-    title: "Modernização de quadro elétrico",
-    description:
-      "Proposta conceitual de adequação de painel, reorganização de circuitos e melhoria das condições de segurança operacional.",
-  },
-  {
-    image: "/assets/images/gerador.webp",
-    imageAlt: "Gerador elétrico para instalação de emergência",
-    tag: "Estudo demonstrativo",
-    location: "Rio de Janeiro",
-    year: "2025",
-    title: "Integração de geração de emergência",
-    description:
-      "Estudo fictício de integração de gerador para suporte a cargas prioritárias e continuidade de operação.",
   },
 ];

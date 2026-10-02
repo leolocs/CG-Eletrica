@@ -22,35 +22,34 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
             {% lucide "map-pin" %}
           </span>
           <div>
-            <h2>Endereço</h2>
-            <!-- Endereço fictício para layout. Substituir pelo endereço oficial antes da publicação. -->
-            <address>Avenida Rui Barbosa, 1200<br />Centro, Macaé - RJ<br />CEP 27910-362</address>
+            <h2>Área de atendimento</h2>
+            <address>Macaé e região<br />Rio de Janeiro</address>
           </div>
         </div>
 
         <div class="contact-item">
-          <a class="contact-icon" href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noreferrer" aria-label="Abrir conversa no WhatsApp">
-            <img src="{{ '/assets/images/whatsapp.svg' | url }}" alt="" decoding="async" />
+          <a class="contact-icon" href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
+            <img src="{{ '/assets/images/whatsapp.svg' | url }}" width="24" height="24" alt="" decoding="async" />
           </a>
           <div>
             <h2>WhatsApp</h2>
-            <a href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noreferrer">{{ empresa.whatsappDisplay }}</a>
+            <a href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noopener noreferrer">{{ empresa.whatsappDisplay }}</a>
           </div>
         </div>
 
         <div class="contact-item">
-          <a class="contact-icon" href="{{ empresa.instagram }}" target="_blank" rel="noreferrer" aria-label="Abrir Instagram da CG Elétrica">
-            <img src="{{ '/assets/images/instagram.svg' | url }}" alt="" decoding="async" />
+          <a class="contact-icon" href="{{ empresa.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram da CG Elétrica">
+            <img src="{{ '/assets/images/instagram.svg' | url }}" width="24" height="24" alt="" decoding="async" />
           </a>
           <div>
             <h2>Instagram</h2>
-            <a href="{{ empresa.instagram }}" target="_blank" rel="noreferrer">{{ empresa.instagramHandle }}</a>
+            <a href="{{ empresa.instagram }}" target="_blank" rel="noopener noreferrer">{{ empresa.instagramHandle }}</a>
           </div>
         </div>
 
         <div class="contact-item">
           <a class="contact-icon" href="mailto:{{ empresa.email }}" aria-label="Enviar e-mail para a CG Elétrica">
-            <img src="{{ '/assets/images/email.svg' | url }}" alt="" decoding="async" />
+            <img src="{{ '/assets/images/email.svg' | url }}" width="24" height="24" alt="" decoding="async" />
           </a>
           <div>
             <h2>E-mail</h2>
@@ -70,7 +69,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
         </div>
       </div>
 
-      <a class="button primary contact-primary" href="https://wa.me/{{ empresa.whatsapp }}?text={{ 'Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento.' | urlencode }}" target="_blank" rel="noreferrer">
+      <a class="button primary contact-primary" href="https://wa.me/{{ empresa.whatsapp }}?text={{ 'Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento.' | urlencode }}" target="_blank" rel="noopener noreferrer">
         Falar pelo WhatsApp
       </a>
     </div>
@@ -82,17 +81,16 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         allowfullscreen
-        border="0"
       ></iframe>
       <div class="contact-map-footer">
         <span class="contact-map-pin" aria-hidden="true">
           {% lucide "map-pin" %}
         </span>
         <div class="contact-map-adress">
-          <strong>Avenida Rui Barbosa, 1200</strong><br>
-          <span>Centro,Macae-RJ</span>
+          <strong>Macaé e região</strong><br>
+          <span>Rio de Janeiro</span>
         </div>
-        <a class="contact-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Maca%C3%A9%2C%20RJ" target="_blank" rel="noreferrer" aria-label="Abrir localização no Google Maps">
+        <a class="contact-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Maca%C3%A9%2C%20RJ" target="_blank" rel="noopener noreferrer" aria-label="Abrir localização no Google Maps">
           {% lucide "external-link" %}
         </a>
       </div>

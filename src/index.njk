@@ -34,7 +34,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
       <h1>Engenharia elétrica para sistemas mais seguros, eficientes e confiáveis</h1>
       <p class="lead">Projetos e soluções técnicas para reduzir riscos, melhorar o desempenho energético e otimizar custos operacionais</p>
       <div class="hero-actions">
-        <a class="button primary" href="https://wa.me/{{ empresa.whatsapp }}?text={{ whatsappMessage | urlencode }}" target="_blank" rel="noreferrer">Solicitar atendimento</a>
+        <a class="button primary" href="https://wa.me/{{ empresa.whatsapp }}?text={{ whatsappMessage | urlencode }}" target="_blank" rel="noopener noreferrer">Solicitar atendimento</a>
         <a class="button secondary arrow" href="{{ '/servicos.html' | url }}">Ver soluções →</a>
       </div>
       <div class="hero-meta">
@@ -81,21 +81,21 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
 
     <div class="service-grid">
       <article class="service-card">
-        <img class="service-image" src="{{ '/assets/images/subestacao.webp' | url }}" alt="Manutenção de Subestações Elétricas" loading="lazy" decoding="async" />
+        <img class="service-image" src="{{ '/assets/images/subestacao.webp' | url }}" width="1200" height="828" alt="Manutenção de Subestações Elétricas" loading="lazy" decoding="async" />
         <h3>Manutenção de Subestações Elétricas</h3>
         <p>Manutenção preventiva, corretiva, inspeção, diagnóstico e garantia de confiabilidade operacional.</p>
         <a href="{{ '/servicos/manutencao-subestacoes.html' | url }}" class="service-link">Ver serviço →</a>
       </article>
 
       <article class="service-card">
-        <img class="service-image" src="{{ '/assets/images/projeto-planta-eletrica.webp' | url }}" alt="Projetos, Cálculos e Orçamentos Elétricos" loading="lazy" decoding="async" />
+        <img class="service-image" src="{{ '/assets/images/projeto-planta-eletrica.webp' | url }}" width="1200" height="800" alt="Projetos, Cálculos e Orçamentos Elétricos" loading="lazy" decoding="async" />
         <h3>Projetos, Cálculos e Orçamentos Elétricos</h3>
         <p>Projetos, dimensionamento, especificações, materiais e documentação técnica.</p>
         <a href="{{ '/servicos/projetos-eletricos.html' | url }}" class="service-link">Ver serviço →</a>
       </article>
 
       <article class="service-card">
-        <img class="service-image" src="{{ '/assets/images/painel-infografico-consumo-eletrico.webp' | url }}" alt="Eficiência Energética" loading="lazy" decoding="async" />
+        <img class="service-image" src="{{ '/assets/images/painel-infografico-consumo-eletrico.webp' | url }}" width="1200" height="600" alt="Eficiência Energética" loading="lazy" decoding="async" />
         <h3>Eficiência Energética</h3>
         <p>Diagnóstico de consumo, demanda, faturas e oportunidades de otimização técnica.</p>
         <a href="{{ '/servicos/eficiencia-energetica.html' | url }}" class="service-link">Ver serviço →</a>
@@ -116,11 +116,11 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
         <li>Identificação de desperdícios e oportunidades</li>
         <li>Estratégia orientada à eficiência e segurança</li>
       </ul>
-      <a class="button primary" href="https://wa.me/{{ empresa.whatsapp }}?text={{ "Olá, gostaria de solicitar uma análise de eficiência energética para minha empresa." | urlencode }}" target="_blank" rel="noreferrer">Solicitar análise</a>
+      <a class="button primary" href="https://wa.me/{{ empresa.whatsapp }}?text={{ "Olá, gostaria de solicitar uma análise de eficiência energética para minha empresa." | urlencode }}" target="_blank" rel="noopener noreferrer">Solicitar análise</a>
     </div>
 
     <div class="energy-visual">
-      <img src="{{ '/assets/images/painel-infografico-consumo-eletrico.webp' | url }}" alt="Gráfico técnico e painel de energia" loading="lazy" decoding="async" />
+      <img src="{{ '/assets/images/painel-infografico-consumo-eletrico.webp' | url }}" width="1200" height="600" alt="Gráfico técnico e painel de energia" loading="lazy" decoding="async" />
     </div>
   </div>
 </section>
@@ -139,7 +139,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
       <div class="project-track">
         {%- for projeto in projetos %}
         <article class="project-card">
-          <img src="{{ projeto.image | url }}" alt="{{ projeto.imageAlt }}" loading="lazy" decoding="async" />
+          <img src="{{ projeto.image | url }}" width="{{ projeto.imageWidth }}" height="{{ projeto.imageHeight }}" alt="{{ projeto.imageAlt }}" loading="lazy" decoding="async" />
           <div class="project-body">
             <span class="tag">{{ projeto.tag }}</span>
             <div class="meta"><span>{{ projeto.location }}</span><span>{{ projeto.year }}</span></div>

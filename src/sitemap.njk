@@ -1,0 +1,16 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ empresa.dominio }}/</loc></url>
+  {%- for item in navegacao %}
+    {%- if item.url != "/index.html" %}
+  <url><loc>{{ empresa.dominio }}{{ item.url }}</loc></url>
+    {%- endif %}
+  {%- endfor %}
+  {%- for servico in servicos %}
+  <url><loc>{{ empresa.dominio }}/servicos/{{ servico.slug }}.html</loc></url>
+  {%- endfor %}
+</urlset>

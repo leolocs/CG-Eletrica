@@ -1,5 +1,5 @@
-// Dados que alimentam a geração automática das páginas de detalhe em /servicos/*.html
-// Editar um serviço aqui reflete no título, SEO, hero, seções e CTA da respectiva página.
+// Dados que alimentam a geração automática das páginas de detalhe em /solucoes/*.html
+// Editar uma solução aqui reflete no título, SEO, hero, seções e CTA da respectiva página.
 module.exports = [
   {
     slug: "projetos-eletricos",
@@ -67,7 +67,7 @@ module.exports = [
       "Prevenção de falhas e interrupções;",
       "Redução de riscos e aumento de vida útil de equipamentos.",
     ],
-    responsabilidadeText: "Aplicável conforme escopo, conforme a legislação e a natureza do serviço, com ART quando indicada.",
+    responsabilidadeText: "Aplicável conforme escopo, conforme a legislação e a natureza da solução, com ART quando indicada.",
     faq: [
       { pergunta: "Qual a periodicidade ideal?", resposta: "Depende do tipo de instalação, do nível de criticidade e das condições operacionais." },
       { pergunta: "Quando a manutenção é urgente?", resposta: "Quando há falhas, aquecimento, ruído anormal, queda de tensão ou riscos de interrupção." },
@@ -105,7 +105,7 @@ module.exports = [
       "Maior previsibilidade operacional;",
       "Estratégia alinhada à segurança e eficiência.",
     ],
-    responsabilidadeText: "O serviço é conduzido com análise técnica rigorosa e orientação de engenharia, sem promessas genéricas de resultados.",
+    responsabilidadeText: "A solução é conduzida com análise técnica rigorosa e orientação de engenharia, sem promessas genéricas de resultados.",
     faq: [
       { pergunta: "É preciso ser grande para solicitar?", resposta: "Não. Qualquer instalação com consumo relevante pode se beneficiar da análise." },
       { pergunta: "Qual o objetivo da análise?", resposta: "Entender como a energia é usada e onde há oportunidades de otimização." },
@@ -116,7 +116,7 @@ module.exports = [
   {
     slug: "spda",
     title: "SPDA | CG Elétrica",
-    description: "Serviços de inspeção e testes de SPDA para garantir a proteção contra descargas atmosféricas e a segurança das instalações.",
+    description: "Soluções de inspeção e testes de SPDA para garantir a proteção contra descargas atmosféricas e a segurança das instalações.",
     whatsappMessage: "Olá, gostaria de solicitar informações sobre SPDA.",
     heroTitle: "Testes de SPDA",
     heroLead: "Avaliação, inspeção e documentação de sistemas de proteção contra descargas atmosféricas.",
@@ -142,7 +142,7 @@ module.exports = [
       "Melhor manutenção e confiabilidade;",
       "Documentação para planejamento e adequação.",
     ],
-    responsabilidadeText: "Os serviços são conduzidos com critérios técnicos e documentação orientada à segurança de instalações e processos.",
+    responsabilidadeText: "As soluções são conduzidas com critérios técnicos e documentação orientada à segurança de instalações e processos.",
     faq: [
       { pergunta: "Como saber se o sistema precisa de teste?", resposta: "Quando há manutenção periódica, alterações na estrutura ou qualquer suspeita de falha ou não conformidade." },
       { pergunta: "Testes são obrigatórios?", resposta: "Em muitos casos, sim, para garantir continuidade de proteção e atendimento às boas práticas e normas relevantes." },
@@ -179,7 +179,7 @@ module.exports = [
       "Menor risco de falhas e acidentes;",
       "Boa base para operação e manutenção.",
     ],
-    responsabilidadeText: "O planejamento e a execução deste tipo de serviço são conduzidos com rigor técnico e atenção às exigências da instalação e do ambiente.",
+    responsabilidadeText: "O planejamento e a execução deste tipo de solução são conduzidos com rigor técnico e atenção às exigências da instalação e do ambiente.",
     faq: [
       { pergunta: "Qual o principal foco?", resposta: "Reduzir riscos em ambientes com atmosferas potencialmente explosivas." },
       { pergunta: "O projeto exige rigidez técnica?", resposta: "Sim. O escopo deve considerar especificações e critérios de segurança muito particulares." },
@@ -256,7 +256,7 @@ module.exports = [
     responsabilidadeText: "As ações são avaliadas e executadas com foco em segurança, eficiência e continuidade do sistema elétrico.",
     faq: [
       { pergunta: "Quando a manutenção deve começar?", resposta: "Se a instalação apresenta desgaste, falhas recorrentes, aquecimento ou queda de desempenho." },
-      { pergunta: "É necessário parar a operação?", resposta: "Depende do nível de risco e do tipo de serviço, mas a análise é sempre orientada à segurança." },
+      { pergunta: "É necessário parar a operação?", resposta: "Depende do nível de risco e do tipo de solução, mas a análise é sempre orientada à segurança." },
     ],
     ctaEyebrow: "Solicitar avaliação",
     ctaButtonText: "Solicitar avaliação",
@@ -290,7 +290,7 @@ module.exports = [
       "Melhor conformidade tecnológica e organizacional;",
       "Documentação adequada para gestão.",
     ],
-    responsabilidadeText: "O serviço é executado com análise técnica, documentação e orientação que apoiam a adequação da instalação conforme a necessidade.",
+    responsabilidadeText: "A solução é executada com análise técnica, documentação e orientação que apoiam a adequação da instalação conforme a necessidade.",
     faq: [
       { pergunta: "Como sei que preciso de adequação?", resposta: "Quando há condições inseguras, pontos críticos ou necessidade de revisão técnica de conformidade." },
       { pergunta: "É possível planejar a adequação em etapas?", resposta: "Sim, sempre que a operação e o risco permitirem uma estratégia gradual." },
@@ -327,7 +327,7 @@ module.exports = [
       "Redução de riscos operacionais;",
       "Base para adequações e manutenção preventiva.",
     ],
-    responsabilidadeText: "Este serviço é realizado com rigor técnico e responsabilidade profissional, conforme a aplicação do escopo e da legislação envolvida.",
+    responsabilidadeText: "Esta solução é realizada com rigor técnico e responsabilidade profissional, conforme a aplicação do escopo e da legislação envolvida.",
     faq: [
       { pergunta: "Quem pode solicitar?", resposta: "Empresas, gestores de imóveis, condomínios e operações que necessitem de laudo técnico." },
       { pergunta: "Qual a diferença entre laudo e parecer?", resposta: "O laudo documenta condições observadas e conclusões; o parecer orienta o diagnóstico e a recomendação prática." },
@@ -368,6 +368,43 @@ module.exports = [
     faq: [
       { pergunta: "Qual a diferença entre gerador e UPS?", resposta: "Gerador atende contingência de energia e o UPS protege cargas sensíveis contra interrupções instantâneas." },
       { pergunta: "Preciso dos dois?", resposta: "Depende da criticidade da carga e do objetivo da instalação." },
+    ],
+    ctaEyebrow: "Solicitar avaliação",
+    ctaButtonText: "Solicitar avaliação",
+  },
+  {
+    slug: "energia-eolica",
+    title: "Distribuição de Rede Elétrica para Energia Eólica | CG Elétrica",
+    description: "Soluções técnicas para distribuição de rede elétrica aplicada a sistemas de energia eólica, com foco em confiabilidade, segurança e desempenho.",
+    whatsappMessage: "Olá, gostaria de solicitar uma avaliação para distribuição de rede elétrica para energia eólica.",
+    heroTitle: "Distribuição de rede elétrica para energia eólica",
+    heroLead: "Planejamento e suporte técnico para integração e distribuição segura da energia gerada por sistemas eólicos.",
+    benefitText: "Estruturação da rede para distribuição eficiente da energia eólica, com redução de riscos operacionais.",
+    quandoText: "Quando o projeto exige conexão, distribuição ou adequação de infraestrutura elétrica para transportar a energia gerada por parques ou sistemas eólicos.",
+    executaList: [
+      "Diagnóstico técnico da infraestrutura elétrica existente;",
+      "Definição de escopo para distribuição da energia gerada;",
+      "Apoio no dimensionamento e integração de rede;",
+      "Documentação técnica e orientação para execução.",
+    ],
+    aplicacoesText: "Empreendimentos com geração eólica, operações com necessidade de integração à rede e projetos de expansão energética.",
+    processoList: [
+      "Levantamento técnico das condições do sistema;",
+      "Análise das necessidades de distribuição e integração;",
+      "Definição técnica da solução e do escopo;",
+      "Orientação de implementação com foco em segurança;",
+      "Entrega de diretrizes e documentação técnica.",
+    ],
+    beneficiosList: [
+      "Distribuição elétrica mais segura e confiável;",
+      "Melhor desempenho operacional do sistema eólico;",
+      "Redução de falhas por incompatibilidade de infraestrutura;",
+      "Base técnica para expansão e continuidade da operação.",
+    ],
+    responsabilidadeText: "A solução é conduzida com critérios de engenharia, conforme o escopo do projeto e requisitos técnicos aplicáveis, com ART quando pertinente.",
+    faq: [
+      { pergunta: "Essa solução atende projetos novos e existentes?", resposta: "Sim. O escopo pode ser aplicado tanto em novas instalações quanto em adequações de sistemas já em operação." },
+      { pergunta: "A CG Elétrica executa apenas consultoria ou também apoio técnico de implementação?", resposta: "A atuação é definida conforme a necessidade do projeto, podendo incluir planejamento técnico e suporte à implementação." },
     ],
     ctaEyebrow: "Solicitar avaliação",
     ctaButtonText: "Solicitar avaliação",

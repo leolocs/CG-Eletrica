@@ -234,6 +234,14 @@ p { margin: 0; }
   padding-right: 20px;
 }
 
+.button.arrow .service-link-icon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.button.arrow:hover .service-link-icon {
+  transform: translateX(3px);
+}
+
 .hero {
   position: relative;
   min-height: min(720px, calc(100vh - 78px));
@@ -483,6 +491,36 @@ p { margin: 0; }
 
 .service-link:hover {
   color: #8c5c00;
+}
+
+.solucoes-page .service-link {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  gap: 6px;
+  width: calc(50% - 22px);
+  margin-left: auto;
+  margin-right: 22px;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.solucoes-page .service-link .service-link-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.solucoes-page .service-link:hover {
+  color: #fff;
+  background: #d99600;
+  opacity: 0.96;
+}
+
+.solucoes-page .service-link:hover .service-link-icon {
+  transform: translateX(3px);
 }
 
 .feature-grid {

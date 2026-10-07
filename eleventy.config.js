@@ -1,4 +1,5 @@
 const {
+  ChevronRight,
   CircleCheck,
   ClipboardCheck,
   Clock,
@@ -11,6 +12,7 @@ const {
 } = require("lucide");
 
 const lucideIcons = {
+  "chevron-right": ChevronRight,
   "circle-check": CircleCheck,
   "clipboard-check": ClipboardCheck,
   clock: Clock,

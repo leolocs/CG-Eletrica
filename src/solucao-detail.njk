@@ -4,7 +4,7 @@ pagination:
   data: servicos
   size: 1
   alias: servico
-permalink: "/servicos/{{ servico.slug }}.html"
+permalink: "/solucoes/{{ servico.slug }}.html"
 eleventyComputed:
   title: "{{ servico.title }}"
   description: "{{ servico.description }}"
@@ -13,7 +13,7 @@ eleventyComputed:
 <section class="page-hero">
   <div class="container detail-hero">
     <div class="hero-copy">
-      <div class="eyebrow">Serviço</div>
+      <div class="eyebrow">Solução</div>
       <h1>{{ servico.heroTitle }}</h1>
       <p class="lead">{{ servico.heroLead }}</p>
     </div>
@@ -27,7 +27,7 @@ eleventyComputed:
 <section class="reveal">
   <div class="container service-detail">
     <article class="detail-card">
-      <h2>Quando esse serviço é necessário?</h2>
+      <h2>Quando essa solução é necessária?</h2>
       <p>{{ servico.quandoText }}</p>
     </article>
     <article class="detail-card">
@@ -61,14 +61,6 @@ eleventyComputed:
     <article class="detail-card">
       <h2>Responsabilidade técnica</h2>
       <p>{{ servico.responsabilidadeText }}</p>
-    </article>
-    <article class="detail-card">
-      <h2>Perguntas frequentes</h2>
-      <div class="faq">
-        {%- for item in servico.faq %}
-        <div class="faq-item"><strong>{{ item.pergunta }}</strong>{{ item.resposta }}</div>
-        {%- endfor %}
-      </div>
     </article>
   </div>
 </section>

@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 permalink: /contato.html
 title: Contato | CG Elétrica
-description: Entre em contato com a CG Elétrica por WhatsApp, Instagram ou solicite uma avaliação técnica para sua instalação no Rio de Janeiro.
+description: Entre em contato com a CG Elétrica por WhatsApp, Instagram ou solicite uma avaliação técnica para sua instalação em todo o Brasil.
 whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento."
 ---
 <section class="page-hero">
@@ -23,17 +23,17 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
           </span>
           <div>
             <h2>Área de atendimento</h2>
-            <address>Macaé e região<br />Rio de Janeiro</address>
+            <p>Atendemos em todo território nacional</p>
           </div>
         </div>
 
         <div class="contact-item">
-          <a class="contact-icon" href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
+          <a class="contact-icon" href="https://wa.link/vnum8i" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
             <img src="{{ '/assets/images/whatsapp.svg' | url }}" width="24" height="24" alt="" decoding="async" />
           </a>
           <div>
             <h2>WhatsApp</h2>
-            <a href="https://wa.me/{{ empresa.whatsapp }}" target="_blank" rel="noopener noreferrer">{{ empresa.whatsappDisplay }}</a>
+            <a href="https://wa.link/vnum8i" target="_blank" rel="noopener noreferrer">{{ empresa.whatsappDisplay }}</a>
           </div>
         </div>
 
@@ -69,15 +69,15 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
         </div>
       </div>
 
-      <a class="button primary contact-primary" href="https://wa.me/{{ empresa.whatsapp }}?text={{ 'Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento.' | urlencode }}" target="_blank" rel="noopener noreferrer">
+      <a class="button primary contact-primary" href="https://wa.link/vnum8i" target="_blank" rel="noopener noreferrer">
         Falar pelo WhatsApp
       </a>
     </div>
 
     <div class="contact-map-card">
       <iframe
-        src="https://www.google.com/maps?q=Maca%C3%A9%2C%20Rio%20de%20Janeiro&amp;output=embed"
-        title="Mapa com a localização geral de Macaé, Rio de Janeiro"
+        src="https://www.google.com/maps?q=Brasil&amp;output=embed"
+        title="Mapa da área de atendimento em todo o Brasil"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         allowfullscreen
@@ -87,10 +87,9 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
           {% lucide "map-pin" %}
         </span>
         <div class="contact-map-adress">
-          <strong>Macaé e região</strong><br>
-          <span>Rio de Janeiro</span>
+          <strong>Atendemos em todo território nacional</strong>
         </div>
-        <a class="contact-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Maca%C3%A9%2C%20RJ" target="_blank" rel="noopener noreferrer" aria-label="Abrir localização no Google Maps">
+        <a class="contact-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Brasil" target="_blank" rel="noopener noreferrer" aria-label="Abrir mapa da área de atendimento no Google Maps">
           {% lucide "external-link" %}
         </a>
       </div>

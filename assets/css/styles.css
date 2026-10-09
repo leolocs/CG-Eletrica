@@ -1689,3 +1689,38 @@ body.solution-dialog-open {
     transition: none !important;
   }
 }
+
+.button.button-primary {
+  min-height: 46px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #fbb016;
+  color: #061224;
+  font-weight: 700;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button.button-primary:hover,
+.hero .button.button-primary:hover,
+.energy-copy .button.button-primary:hover,
+.cta-box .button.button-primary:hover {
+  border-color: #fbb016;
+  background: #061224;
+  color: #fbb016;
+  transform: translateY(-1px);
+}
+
+.button.button-primary:active {
+  transform: translateY(0);
+}
+
+.button.button-primary:focus-visible {
+  outline: 3px solid rgba(251,176,22,0.35);
+  outline-offset: 3px;
+}

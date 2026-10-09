@@ -1,4 +1,4 @@
-<dialog class="solution-dialog" id="solution-dialog" data-solution-dialog aria-labelledby="solution-dialog-title">
+<dialog class="solution-dialog" id="solution-dialog" data-solution-dialog>
   <div class="solution-dialog-shell">
     <button class="solution-dialog-close" type="button" data-solution-close aria-label="Fechar detalhes da solução">
       <span aria-hidden="true">&times;</span>
@@ -12,7 +12,7 @@
   <article class="solution-modal-content">
     <header class="solution-modal-header">
       <div class="solution-modal-title-wrap">
-        <h2 id="solution-dialog-title">{{ servico.heroTitle }}</h2>
+        <h2 id="solution-dialog-title-{{ servico.slug }}">{{ servico.heroTitle }}</h2>
         <p class="lead">{{ servico.heroLead }}</p>
       </div>
       <img

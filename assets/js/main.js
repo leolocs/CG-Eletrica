@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       document.body.classList.remove('solution-dialog-open');
       dialogContent.replaceChildren();
+      solutionDialog.removeAttribute('aria-labelledby');
       updateLinkStates();
       openedSlug = null;
       if (!preserveHash) clearHash();
@@ -140,8 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!template) return false;
 
       dialogContent.replaceChildren(template.content.cloneNode(true));
+      const dialogTitle = dialogContent.querySelector("h2[id]");
+
+      if (dialogTitle) {
+        solutionDialog.setAttribute("aria-labelledby", dialogTitle.id);
+      }
       openedSlug = slug;
       openerLink = linkRef || links.find((link) => link.dataset.solution === slug) || null;
+
       updateLinkStates(slug);
 
       if (!solutionDialog.open) {

@@ -10,10 +10,9 @@ eleventyComputed:
   description: "{{ servico.description }}"
   whatsappMessage: "{{ servico.whatsappMessage }}"
 ---
-<section class="page-hero">
+<section class="page-hero solution-detail-hero" style="--solution-hero-image: url('{{ servico.heroImage | url }}');">
   <div class="container detail-hero">
     <div class="hero-copy">
-      <div class="eyebrow">Solução</div>
       <h1>{{ servico.heroTitle }}</h1>
       <p class="lead">{{ servico.heroLead }}</p>
     </div>
@@ -24,7 +23,7 @@ eleventyComputed:
   </div>
 </section>
 
-<section class="reveal">
+<section class="reveal solution-detail-content">
   <div class="container service-detail">
     <article class="detail-card">
       <h2>Quando essa solução é necessária?</h2>

@@ -1,0 +1,103 @@
+<dialog class="solution-dialog" id="solution-dialog" data-solution-dialog aria-labelledby="solution-dialog-title">
+  <div class="solution-dialog-shell">
+    <button class="solution-dialog-close" type="button" data-solution-close aria-label="Fechar detalhes da solução">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="solution-dialog-scroll" data-solution-dialog-content></div>
+  </div>
+</dialog>
+
+{%- for servico in servicos %}
+<template data-solution-template="{{ servico.slug }}">
+  <article class="solution-modal-content">
+    <header class="solution-modal-header">
+      <div class="solution-modal-title-wrap">
+        <h2 id="solution-dialog-title">{{ servico.heroTitle }}</h2>
+        <p class="lead">{{ servico.heroLead }}</p>
+      </div>
+      <img
+        class="solution-modal-image"
+        src="{{ servico.heroImage | url }}"
+        alt="{{ servico.cardItems[0].imageAlt }}"
+        width="{{ servico.cardItems[0].imageWidth }}"
+        height="{{ servico.cardItems[0].imageHeight }}"
+        loading="lazy"
+        decoding="async"
+      />
+    </header>
+
+    <section class="solution-modal-benefit">
+      <div>
+        <h3>Benefício principal</h3>
+        <p>{{ servico.benefitText }}</p>
+      </div>
+    </section>
+
+    <section class="solution-modal-editorial">
+      <article>
+        <h3>Quando essa solução é necessária?</h3>
+        <p>{{ servico.quandoText }}</p>
+      </article>
+      <article>
+        <h3>Aplicações</h3>
+        <p>{{ servico.aplicacoesText }}</p>
+      </article>
+    </section>
+
+    <section class="solution-modal-exec">
+      <h3>O que a CG Elétrica executa?</h3>
+      <ul>
+        {%- for item in servico.executaList %}
+        <li>{% lucide "circle-check", "solution-modal-check-icon" %}<span>{{ item }}</span></li>
+        {%- endfor %}
+      </ul>
+    </section>
+
+    <section class="solution-modal-process">
+      <h3>Processo</h3>
+      <ol>
+        {%- for item in servico.processoList %}
+        <li>
+          <span>{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+          <p>{{ item }}</p>
+        </li>
+        {%- endfor %}
+      </ol>
+    </section>
+
+    <section class="solution-modal-tech">
+      <h3>Benefícios técnicos</h3>
+      <ul>
+        {%- for item in servico.beneficiosList %}
+        <li>{% lucide "circle-check", "solution-modal-check-icon" %}<span>{{ item }}</span></li>
+        {%- endfor %}
+      </ul>
+    </section>
+
+    <section class="solution-modal-responsibility">
+      <div>
+        <h3>Responsabilidade técnica</h3>
+        <p>{{ servico.responsabilidadeText }}</p>
+      </div>
+      <dl>
+        <div><dt>CREA</dt><dd>{{ empresa.crea }}</dd></div>
+        <div><dt>ART</dt><dd>Quando aplicável</dd></div>
+      </dl>
+    </section>
+
+    <section class="solution-modal-faq">
+      <h3>Perguntas frequentes</h3>
+      {%- for item in servico.faq %}
+      <details>
+        <summary>{{ item.pergunta }}</summary>
+        <p>{{ item.resposta }}</p>
+      </details>
+      {%- endfor %}
+    </section>
+
+    <footer class="solution-modal-footer">
+      <a class="button primary" href="https://wa.link/vnum8i" target="_blank" rel="noopener noreferrer">{{ servico.ctaButtonText }}</a>
+    </footer>
+  </article>
+</template>
+{%- endfor %}

@@ -89,4 +89,115 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     revealItems.forEach((item) => item.classList.add('visible'));
   }
+
+  const solutionDialog = document.querySelector('[data-solution-dialog]');
+  const solutionsGrid = document.querySelector('[data-solutions-grid]');
+
+  if (solutionDialog && solutionsGrid) {
+    const dialogContent = solutionDialog.querySelector('[data-solution-dialog-content]');
+    const closeButton = solutionDialog.querySelector('[data-solution-close]');
+    const templates = new Map(
+      Array.from(document.querySelectorAll('[data-solution-template]')).map((template) => [
+        template.dataset.solutionTemplate,
+        template,
+      ]),
+    );
+    const links = Array.from(solutionsGrid.querySelectorAll('[data-solution]'));
+    let openerLink = null;
+    let openedSlug = null;
+
+    const updateLinkStates = (slug = null) => {
+      links.forEach((link) => {
+        const isActive = link.dataset.solution === slug;
+        link.setAttribute('aria-expanded', String(isActive));
+        link.closest('[data-solution-card]')?.classList.toggle('is-active', isActive);
+      });
+    };
+
+    const clearHash = () => {
+      if (window.location.hash) {
+        history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+      }
+    };
+
+    const closeDialog = ({ preserveHash = false } = {}) => {
+      if (solutionDialog.open) {
+        solutionDialog.close();
+      }
+      document.body.classList.remove('solution-dialog-open');
+      dialogContent.replaceChildren();
+      updateLinkStates();
+      openedSlug = null;
+      if (!preserveHash) clearHash();
+      if (openerLink) {
+        openerLink.focus();
+        openerLink = null;
+      }
+    };
+
+    const openDialog = (slug, linkRef, { updateHash = true } = {}) => {
+      const template = templates.get(slug);
+      if (!template) return false;
+
+      dialogContent.replaceChildren(template.content.cloneNode(true));
+      openedSlug = slug;
+      openerLink = linkRef || links.find((link) => link.dataset.solution === slug) || null;
+      updateLinkStates(slug);
+
+      if (!solutionDialog.open) {
+        solutionDialog.showModal();
+      }
+      document.body.classList.add('solution-dialog-open');
+
+      if (updateHash && window.location.hash !== `#${slug}`) {
+        history.pushState(null, '', `#${slug}`);
+      }
+
+      return true;
+    };
+
+    solutionsGrid.addEventListener('click', (event) => {
+      const link = event.target.closest('[data-solution]');
+      if (!link || !solutionsGrid.contains(link)) return;
+
+      const slug = link.dataset.solution;
+      if (!templates.has(slug)) return;
+
+      event.preventDefault();
+      if (openedSlug === slug && solutionDialog.open) {
+        closeDialog();
+        return;
+      }
+      openDialog(slug, link);
+    });
+
+    closeButton?.addEventListener('click', () => closeDialog());
+
+    solutionDialog.addEventListener('cancel', (event) => {
+      event.preventDefault();
+      closeDialog();
+    });
+
+    solutionDialog.addEventListener('click', (event) => {
+      if (event.target === solutionDialog) {
+        closeDialog();
+      }
+    });
+
+    window.addEventListener('hashchange', () => {
+      const slug = window.location.hash.slice(1);
+      if (!slug) {
+        if (solutionDialog.open) closeDialog({ preserveHash: true });
+        return;
+      }
+      if (templates.has(slug)) {
+        openDialog(slug, null, { updateHash: false });
+      }
+    });
+
+    const initialSlug = window.location.hash.slice(1);
+    if (initialSlug && templates.has(initialSlug)) {
+      openDialog(initialSlug, null, { updateHash: false });
+    }
+  }
 });

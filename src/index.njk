@@ -8,6 +8,7 @@ ogTitle: CG Elétrica | Engenharia Elétrica no Rio de Janeiro
 ogDescription: Engenharia elétrica aplicada a soluções seguras, eficientes e confiáveis para empresas e empreendimentos no Rio de Janeiro.
 jsonLd: true
 whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicitar atendimento."
+bodyClass: home-page solution-explorer-page
 ---
 <section class="hero">
   <video
@@ -35,7 +36,7 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
       <p class="lead">Projetos e soluções técnicas para reduzir riscos, melhorar o desempenho energético e otimizar custos operacionais</p>
       <div class="hero-actions">
         <a class="button primary" href="https://wa.link/vnum8i" target="_blank" rel="noopener noreferrer">Solicitar atendimento</a>
-        <a class="button secondary arrow" href="{{ '/solucoes.html' | url }}">Ver soluções {% lucide "chevron-right", "service-link-icon" %}</a>
+        <a class="button secondary page-link" href="{{ '/solucoes.html' | url }}">Ver soluções {% lucide "chevron-right", "service-link-icon" %}</a>
       </div>
       <div class="hero-meta">
         <span>Especialista em eficiência energética</span>
@@ -73,41 +74,68 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="eyebrow">Soluções</div>
         <h2>Soluções em Engenharia Elétrica</h2>
       </div>
-      <a href="{{ '/solucoes.html' | url }}" class="button secondary">Conhecer mais soluções →</a>
+      <a href="{{ '/solucoes.html' | url }}" class="button secondary page-link">Conhecer mais soluções {% lucide "chevron-right", "service-link-icon" %}</a>
     </div>
 
-    <div class="service-grid">
-      <article class="service-card">
+    <div class="service-grid" data-solutions-grid>
+      <article class="service-card" data-solution-card="manutencao-subestacoes">
         <img class="service-image" src="{{ '/assets/images/subestacao.webp' | url }}" width="1200" height="828" alt="Manutenção de Subestações Elétricas" loading="lazy" decoding="async" />
         <h3>Manutenção de Subestações Elétricas</h3>
         <p>Manutenção preventiva, corretiva, inspeção, diagnóstico e garantia de confiabilidade operacional.</p>
-        <a href="{{ '/solucoes/manutencao-subestacoes.html' | url }}" class="service-link">Ver solução →</a>
+        <a
+          href="{{ '/solucoes/manutencao-subestacoes.html' | url }}"
+          class="service-link"
+          data-solution="manutencao-subestacoes"
+          aria-haspopup="dialog"
+          aria-controls="solution-dialog"
+          aria-expanded="false"
+        >
+          Ver detalhes {% lucide "chevron-right", "service-link-icon" %}
+        </a>
       </article>
 
-      <article class="service-card">
+      <article class="service-card" data-solution-card="projetos-eletricos">
         <img class="service-image" src="{{ '/assets/images/projeto-planta-eletrica.webp' | url }}" width="1200" height="800" alt="Projetos, Cálculos e Orçamentos Elétricos" loading="lazy" decoding="async" />
         <h3>Projetos, Cálculos e Orçamentos Elétricos</h3>
         <p>Projetos, dimensionamento, especificações, materiais e documentação técnica.</p>
-        <a href="{{ '/solucoes/projetos-eletricos.html' | url }}" class="service-link">Ver solução →</a>
+        <a
+          href="{{ '/solucoes/projetos-eletricos.html' | url }}"
+          class="service-link"
+          data-solution="projetos-eletricos"
+          aria-haspopup="dialog"
+          aria-controls="solution-dialog"
+          aria-expanded="false"
+        >
+          Ver detalhes {% lucide "chevron-right", "service-link-icon" %}
+        </a>
       </article>
 
-      <article class="service-card">
+      <article class="service-card" data-solution-card="eficiencia-energetica">
         <img class="service-image" src="{{ '/assets/images/painel-infografico-consumo-eletrico.webp' | url }}" width="1200" height="600" alt="Eficiência Energética" loading="lazy" decoding="async" />
         <h3>Eficiência Energética</h3>
         <p>Diagnóstico de consumo, demanda, faturas e oportunidades de otimização técnica.</p>
-        <a href="{{ '/solucoes/eficiencia-energetica.html' | url }}" class="service-link">Ver solução →</a>
+        <a
+          href="{{ '/solucoes/eficiencia-energetica.html' | url }}"
+          class="service-link"
+          data-solution="eficiencia-energetica"
+          aria-haspopup="dialog"
+          aria-controls="solution-dialog"
+          aria-expanded="false"
+        >
+          Ver detalhes {% lucide "chevron-right", "service-link-icon" %}
+        </a>
       </article>
     </div>
   </div>
 </section>
 
+{% include "components/solution-dialog.njk" %}
+
 <section class="reveal">
   <div class="container energy-layout">
     <div class="energy-copy">
-      <div class="eyebrow">Eficiência energética</div>
       <h2>Energia bem utilizada custa menos.</h2>
       <p class="lead">A CG Elétrica avalia consumo, demanda, faturas, instalações e perfil de utilização para identificar oportunidades de otimização técnica e redução racional de custos.</p>
       <ul class="energy-list">
@@ -129,10 +157,9 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="eyebrow">Projetos</div>
         <h2>Projetos realizados</h2>
       </div>
-      <a href="{{ '/projetos.html' | url }}" class="button secondary">Ver projetos →</a>
+      <a href="{{ '/projetos.html' | url }}" class="button secondary page-link">Ver projetos {% lucide "chevron-right", "service-link-icon" %}</a>
     </div>
 
     <div class="project-carousel">
@@ -154,4 +181,4 @@ whatsappMessage: "Olá, encontrei a CG Elétrica pelo site e gostaria de solicit
 </section>
 
 {% from "components/cta-final.njk" import ctaFinal with context %}
-{{ ctaFinal("Atendimento", "Olá, gostaria de verificar o atendimento da CG Elétrica para minha região e solicitar uma avaliação.", "Falar com a CG Elétrica") }}
+{{ ctaFinal("", "Olá, gostaria de verificar o atendimento da CG Elétrica para minha região e solicitar uma avaliação.", "Falar com a CG Elétrica") }}
